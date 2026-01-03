@@ -4,523 +4,141 @@
 	<title>EcoTelier - Fabrication Métallique sur Mesure</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="EcoTelier - L'art du métal sur mesure">
+	<meta name="description" content="EcoTelier - Spécialiste en fabrication de produits métalliques pour industries et particuliers. Établis, tables industrielles, mezzanines, pergolas et plus.">
+
 	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/styles.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-	<!-- Noise overlay -->
-	<div class="noise"></div>
-	
-	<!-- Cursor -->
-	<div class="cursor"></div>
-	<div class="cursor-follower"></div>
-
-	<header class="header">
-		<div class="header-inner">
-			<a href="#" class="logo" aria-label="EcoTelier">
-				<svg class="logo-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-					<!-- Cadre extérieur qui se dessine -->
-					<rect class="logo-frame" x="4" y="4" width="52" height="52" rx="2" fill="none" stroke-width="2"/>
-					<!-- E stylisé avec des barres métalliques -->
-					<g class="logo-letter">
-						<rect class="bar bar-1" x="16" y="14" width="28" height="4" rx="1"/>
-						<rect class="bar bar-2" x="16" y="28" width="20" height="4" rx="1"/>
-						<rect class="bar bar-3" x="16" y="42" width="28" height="4" rx="1"/>
-						<rect class="bar bar-v" x="16" y="14" width="4" height="32" rx="1"/>
-					</g>
-					<!-- Point d'accent -->
-					<circle class="logo-dot" cx="48" cy="46" r="4"/>
-					<!-- Étincelles -->
-					<g class="sparks">
-						<line class="spark" x1="48" y1="14" x2="52" y2="10"/>
-						<line class="spark" x1="50" y1="18" x2="55" y2="16"/>
-						<line class="spark" x1="46" y1="12" x2="46" y2="6"/>
-					</g>
-				</svg>
-				<div class="logo-text">
-					<span class="logo-name">EcoTelier</span>
-					<span class="logo-tagline">Métal & Design</span>
-				</div>
-			</a>
-			
-			<nav class="nav">
-				<ul class="nav-list" id="nav-list">
-					<li><a href="#work" class="nav-link" data-index="01">Réalisations</a></li>
-					<li><a href="#services" class="nav-link" data-index="02">Services</a></li>
-					<li><a href="#about" class="nav-link" data-index="03">À propos</a></li>
-					<li><a href="#contact" class="nav-link nav-link-accent" data-index="04">Contact</a></li>
-				</ul>
-				<button class="nav-toggle" id="nav-toggle" aria-label="Menu">
-					<span></span>
-				</button>
-			</nav>
+	<!-- Contact Bar -->
+	<div class="top-bar">
+		<div class="container">
+			<div class="top-bar-content">
+				<a href="https://maps.google.com" target="_blank" class="top-link">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+						<circle cx="12" cy="10" r="3"/>
+					</svg>
+					<span>Yaounde, Cameroon</span>
+				</a>
+				<a href="tel:+237000000000" class="top-link">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+					</svg>
+					<span>+237 00 000 0000</span>
+				</a>
+				<a href="mailto:contact@ecotelier.com" class="top-link">
+					<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<rect x="2" y="4" width="20" height="16" rx="2"/>
+						<path d="m22 7-10 7L2 7"/>
+					</svg>
+					<span>contact@ecotelier.com</span>
+				</a>
+			</div>
 		</div>
-		<div class="header-line"></div>
+	</div>
+
+	<!-- Header -->
+	<header class="header">
+		<div class="container">
+			<div class="header-content">
+				<a href="index.html" class="logo">
+					<img src="images/logo.png" alt="EcoTelier" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+					<div class="logo-text" style="display:none;">
+						<span class="logo-eco">Eco</span><span class="logo-telier">Telier</span>
+					</div>
+				</a>
+				
+				<nav class="nav">
+					<button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<ul class="nav-menu" id="nav-menu">
+						<li><a href="#accueil">Accueil</a></li>
+						<li><a href="#apropos">À propos</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#produits">Produits</a></li>
+						<li><a href="#temoignages">Témoignages</a></li>
+						<li><a href="#contact" class="nav-cta">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
 	</header>
 
 	<main>
-		<!-- HERO -->
-		<section class="hero" id="hero">
-			<div class="hero-grid">
+		<!-- Hero Section -->
+		<section class="hero" id="accueil">
+			<div class="container">
 				<div class="hero-content">
-					<div class="hero-label">
-						<span class="label-line"></span>
-						<span class="label-text">Fabrication sur mesure</span>
-					</div>
-					<h1 class="hero-title">
-						<span class="title-line">
-							<span class="word" data-delay="0">L'art</span>
-							<span class="word" data-delay="1">du</span>
-						</span>
-						<span class="title-line">
-							<span class="word accent" data-delay="2">métal</span>
-						</span>
-					</h1>
-					<p class="hero-desc">
-						Nous transformons le métal en œuvres fonctionnelles. Design contemporain, fabrication artisanale, qualité sans compromis.
-					</p>
-					<div class="hero-cta">
-						<a href="#work" class="btn-primary">
-							<span class="btn-text">Voir nos créations</span>
-							<span class="btn-icon">
-								<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-									<path d="M7 17L17 7M7 7h10v10"/>
-								</svg>
-							</span>
-						</a>
-						<a href="#contact" class="btn-outline">Demander un devis</a>
-					</div>
-				</div>
-				
-				<div class="hero-visual">
-					<div class="visual-container">
-						<!-- Sculpture métallique abstraite animée -->
-						<svg class="sculpture" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
-							<defs>
-								<linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-									<stop offset="0%" stop-color="#333"/>
-									<stop offset="50%" stop-color="#1a1a1a"/>
-									<stop offset="100%" stop-color="#0d0d0d"/>
-								</linearGradient>
-								<filter id="glow">
-									<feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-									<feMerge>
-										<feMergeNode in="coloredBlur"/>
-										<feMergeNode in="SourceGraphic"/>
-									</feMerge>
-								</filter>
-							</defs>
-							
-							<!-- Structure principale -->
-							<g class="structure">
-								<!-- Colonne centrale -->
-								<rect class="beam main-beam" x="185" y="80" width="30" height="340" rx="2"/>
-								
-								<!-- Traverses horizontales -->
-								<rect class="beam h-beam h1" x="100" y="120" width="200" height="12" rx="1"/>
-								<rect class="beam h-beam h2" x="80" y="200" width="240" height="12" rx="1"/>
-								<rect class="beam h-beam h3" x="120" y="280" width="160" height="12" rx="1"/>
-								<rect class="beam h-beam h4" x="60" y="360" width="280" height="12" rx="1"/>
-								
-								<!-- Diagonales -->
-								<line class="diagonal d1" x1="100" y1="132" x2="185" y2="200" stroke-width="6" stroke-linecap="round"/>
-								<line class="diagonal d2" x1="300" y1="132" x2="215" y2="200" stroke-width="6" stroke-linecap="round"/>
-								<line class="diagonal d3" x1="120" y1="292" x2="185" y2="360" stroke-width="6" stroke-linecap="round"/>
-								<line class="diagonal d4" x1="280" y1="292" x2="215" y2="360" stroke-width="6" stroke-linecap="round"/>
-								
-								<!-- Joints/Boulons -->
-								<g class="bolts">
-									<circle cx="200" cy="126" r="8"/>
-									<circle cx="200" cy="206" r="8"/>
-									<circle cx="200" cy="286" r="8"/>
-									<circle cx="200" cy="366" r="8"/>
-									<circle cx="110" cy="126" r="5"/>
-									<circle cx="290" cy="126" r="5"/>
-									<circle cx="90" cy="206" r="5"/>
-									<circle cx="310" cy="206" r="5"/>
-								</g>
-							</g>
-							
-							<!-- Particules flottantes -->
-							<g class="particles">
-								<circle class="particle" cx="50" cy="100" r="3"/>
-								<circle class="particle" cx="350" cy="150" r="2"/>
-								<circle class="particle" cx="30" cy="300" r="2.5"/>
-								<circle class="particle" cx="370" cy="400" r="3"/>
-								<circle class="particle" cx="60" cy="450" r="2"/>
-							</g>
-							
-							<!-- Lignes décoratives -->
-							<g class="deco-lines">
-								<line class="deco-line" x1="20" y1="80" x2="20" y2="180"/>
-								<line class="deco-line" x1="380" y1="320" x2="380" y2="420"/>
-							</g>
-						</svg>
-						
-						<!-- Étiquettes flottantes -->
-						<div class="float-tag tag-1">
-							<span class="tag-num">15+</span>
-							<span class="tag-label">Années d'expertise</span>
-						</div>
-						<div class="float-tag tag-2">
-							<span class="tag-num">∞</span>
-							<span class="tag-label">Possibilités</span>
-						</div>
+					<span class="hero-tag">Fabrication sur mesure</span>
+					<h1>L'excellence métallique<br>au service de <em>vos projets</em></h1>
+					<p>Conception et réalisation de structures métalliques pour l'industrie et les particuliers. Qualité artisanale, design innovant, durabilité garantie.</p>
+					<div class="hero-buttons">
+						<a href="#services" class="btn btn-primary">Découvrir nos services</a>
+						<a href="#contact" class="btn btn-secondary">Demander un devis</a>
 					</div>
 				</div>
 			</div>
-			
-			<!-- Scroll indicator -->
-			<div class="scroll-cue">
-				<div class="scroll-line"></div>
-				<span>Scroll</span>
-			</div>
-			
-			<!-- Marquee -->
-			<div class="hero-marquee">
-				<div class="marquee-track">
-					<span>Établis</span>
-					<span>•</span>
-					<span>Tables</span>
-					<span>•</span>
-					<span>Mezzanines</span>
-					<span>•</span>
-					<span>Pergolas</span>
-					<span>•</span>
-					<span>Garde-corps</span>
-					<span>•</span>
-					<span>Lustres</span>
-					<span>•</span>
-					<span>Étagères</span>
-					<span>•</span>
-					<span>Établis</span>
-					<span>•</span>
-					<span>Tables</span>
-					<span>•</span>
-					<span>Mezzanines</span>
-					<span>•</span>
-					<span>Pergolas</span>
-					<span>•</span>
-					<span>Garde-corps</span>
-					<span>•</span>
-					<span>Lustres</span>
-					<span>•</span>
-					<span>Étagères</span>
-					<span>•</span>
-				</div>
+			<div class="hero-image">
+				<img src="images/metal-fabrication-1024x702-975091580.jpg" alt="Fabrication métallique" onerror="this.parentElement.classList.add('no-image');">
 			</div>
 		</section>
 
-		<!-- WORK / PORTFOLIO -->
-		<section class="section-work" id="work">
-			<div class="container">
-				<header class="section-header">
-					<span class="section-num">01</span>
-					<h2 class="section-title">
-						<span class="title-small">Portfolio</span>
-						<span class="title-big">Nos créations</span>
-					</h2>
-					<p class="section-desc">Chaque projet est unique. Découvrez une sélection de nos réalisations métalliques.</p>
-				</header>
-				
-				<div class="work-grid">
-					<article class="work-item work-large" data-category="mobilier">
-						<div class="work-visual">
-							<div class="work-icon">
-								<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-									<rect x="10" y="35" width="60" height="8" rx="1"/>
-									<rect x="15" y="43" width="6" height="25" rx="1"/>
-									<rect x="59" y="43" width="6" height="25" rx="1"/>
-									<path d="M30 35V25h20v10" stroke-width="1.5"/>
-								</svg>
-							</div>
-						</div>
-						<div class="work-info">
-							<span class="work-cat">Mobilier industriel</span>
-							<h3>Table Atelier XL</h3>
-							<p>Structure acier, plateau chêne massif</p>
-						</div>
-						<div class="work-overlay"></div>
-					</article>
-					
-					<article class="work-item" data-category="deco">
-						<div class="work-visual">
-							<div class="work-icon">
-								<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-									<circle cx="40" cy="25" r="12"/>
-									<line x1="40" y1="37" x2="40" y2="70"/>
-									<path d="M25 50L40 37L55 50"/>
-									<circle cx="40" cy="25" r="5" fill="currentColor" stroke="none"/>
-								</svg>
-							</div>
-						</div>
-						<div class="work-info">
-							<span class="work-cat">Décoration</span>
-							<h3>Lustre Géométrique</h3>
-						</div>
-						<div class="work-overlay"></div>
-					</article>
-					
-					<article class="work-item" data-category="exterieur">
-						<div class="work-visual">
-							<div class="work-icon">
-								<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-									<path d="M10 65V40L40 20L70 40V65"/>
-									<line x1="10" y1="48" x2="70" y2="48"/>
-									<line x1="10" y1="56" x2="70" y2="56"/>
-									<line x1="25" y1="40" x2="25" y2="65"/>
-									<line x1="55" y1="40" x2="55" y2="65"/>
-								</svg>
-							</div>
-						</div>
-						<div class="work-info">
-							<span class="work-cat">Extérieur</span>
-							<h3>Pergola Moderne</h3>
-						</div>
-						<div class="work-overlay"></div>
-					</article>
-					
-					<article class="work-item" data-category="mobilier">
-						<div class="work-visual">
-							<div class="work-icon">
-								<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-									<rect x="15" y="15" width="50" height="50" rx="2"/>
-									<line x1="15" y1="32" x2="65" y2="32"/>
-									<line x1="15" y1="48" x2="65" y2="48"/>
-									<line x1="38" y1="15" x2="38" y2="65"/>
-								</svg>
-							</div>
-						</div>
-						<div class="work-info">
-							<span class="work-cat">Rangement</span>
-							<h3>Étagère Modulaire</h3>
-						</div>
-						<div class="work-overlay"></div>
-					</article>
-					
-					<article class="work-item work-large" data-category="structure">
-						<div class="work-visual">
-							<div class="work-icon">
-								<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-									<rect x="10" y="20" width="25" height="25" rx="1"/>
-									<rect x="45" y="20" width="25" height="25" rx="1"/>
-									<rect x="10" y="50" width="60" height="8" rx="1"/>
-									<line x1="22" y1="58" x2="22" y2="70"/>
-									<line x1="58" y1="58" x2="58" y2="70"/>
-								</svg>
-							</div>
-						</div>
-						<div class="work-info">
-							<span class="work-cat">Structure</span>
-							<h3>Mezzanine Industrielle</h3>
-							<p>Solution d'optimisation d'espace sur mesure</p>
-						</div>
-						<div class="work-overlay"></div>
-					</article>
-					
-					<article class="work-item" data-category="exterieur">
-						<div class="work-visual">
-							<div class="work-icon">
-								<svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1.5">
-									<rect x="10" y="25" width="60" height="35" rx="2"/>
-									<line x1="20" y1="25" x2="20" y2="60"/>
-									<line x1="35" y1="25" x2="35" y2="60"/>
-									<line x1="50" y1="25" x2="50" y2="60"/>
-									<line x1="65" y1="25" x2="65" y2="60"/>
-								</svg>
-							</div>
-						</div>
-						<div class="work-info">
-							<span class="work-cat">Sécurité</span>
-							<h3>Garde-Corps Design</h3>
-						</div>
-						<div class="work-overlay"></div>
-					</article>
-				</div>
-				
-				<div class="work-cta">
-					<a href="#contact" class="btn-primary">
-						<span class="btn-text">Discuter de votre projet</span>
-						<span class="btn-icon">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M5 12h14M12 5l7 7-7 7"/>
-							</svg>
-						</span>
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- SERVICES -->
-		<section class="section-services" id="services">
-			<div class="container">
-				<header class="section-header">
-					<span class="section-num">02</span>
-					<h2 class="section-title">
-						<span class="title-small">Expertise</span>
-						<span class="title-big">Nos services</span>
-					</h2>
-				</header>
-				
-				<div class="services-list">
-					<article class="service-item">
-						<div class="service-num">01</div>
-						<div class="service-content">
-							<h3>Mobilier Industriel</h3>
-							<p>Établis, tables, mezzanines et échelles sur mesure pour optimiser vos espaces professionnels.</p>
-							<ul class="service-tags">
-								<li>Établis</li>
-								<li>Tables</li>
-								<li>Mezzanines</li>
-								<li>Échelles</li>
-							</ul>
-						</div>
-						<div class="service-visual">
-							<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1">
-								<rect x="20" y="50" width="80" height="10" rx="1"/>
-								<rect x="25" y="60" width="8" height="40" rx="1"/>
-								<rect x="87" y="60" width="8" height="40" rx="1"/>
-								<rect x="50" y="35" width="20" height="15" rx="1"/>
-							</svg>
-						</div>
-						<a href="#contact" class="service-link" aria-label="En savoir plus">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M7 17L17 7M7 7h10v10"/>
-							</svg>
-						</a>
-					</article>
-					
-					<article class="service-item">
-						<div class="service-num">02</div>
-						<div class="service-content">
-							<h3>Décoration Intérieure</h3>
-							<p>Mobilier design et luminaires au style industriel pour espaces contemporains.</p>
-							<ul class="service-tags">
-								<li>Guéridons</li>
-								<li>Lustres</li>
-								<li>Étagères</li>
-								<li>Tables design</li>
-							</ul>
-						</div>
-						<div class="service-visual">
-							<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1">
-								<circle cx="60" cy="35" r="15"/>
-								<line x1="60" y1="50" x2="60" y2="100"/>
-								<path d="M40 70L60 50L80 70"/>
-								<circle cx="60" cy="35" r="6" fill="currentColor" stroke="none"/>
-							</svg>
-						</div>
-						<a href="#contact" class="service-link" aria-label="En savoir plus">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M7 17L17 7M7 7h10v10"/>
-							</svg>
-						</a>
-					</article>
-					
-					<article class="service-item">
-						<div class="service-num">03</div>
-						<div class="service-content">
-							<h3>Aménagement Extérieur</h3>
-							<p>Structures et mobilier d'extérieur alliant durabilité et esthétique moderne.</p>
-							<ul class="service-tags">
-								<li>Pergolas</li>
-								<li>Auvents</li>
-								<li>Garde-corps</li>
-								<li>Mobilier jardin</li>
-							</ul>
-						</div>
-						<div class="service-visual">
-							<svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1">
-								<path d="M20 90V60L60 30L100 60V90"/>
-								<line x1="20" y1="70" x2="100" y2="70"/>
-								<line x1="20" y1="80" x2="100" y2="80"/>
-								<line x1="40" y1="60" x2="40" y2="90"/>
-								<line x1="80" y1="60" x2="80" y2="90"/>
-							</svg>
-						</div>
-						<a href="#contact" class="service-link" aria-label="En savoir plus">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M7 17L17 7M7 7h10v10"/>
-							</svg>
-						</a>
-					</article>
-				</div>
-			</div>
-		</section>
-
-		<!-- ABOUT -->
-		<section class="section-about" id="about">
+		<!-- About Section -->
+		<section class="section section-about" id="apropos">
 			<div class="container">
 				<div class="about-grid">
-					<div class="about-visual">
-						<div class="about-shape">
-							<svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<rect class="shape-rect" x="50" y="50" width="300" height="400" rx="4" stroke-width="1"/>
-								<rect class="shape-fill" x="80" y="100" width="240" height="300" rx="2"/>
-								<!-- Silhouette atelier -->
-								<g class="workshop" opacity="0.6">
-									<path d="M100 350 L100 250 L200 180 L300 250 L300 350 Z" fill="rgba(255,255,255,0.03)"/>
-									<rect x="170" y="280" width="60" height="70" fill="rgba(255,255,255,0.05)"/>
-									<rect x="120" y="260" width="30" height="25" fill="rgba(255,255,255,0.08)"/>
-									<rect x="250" y="260" width="30" height="25" fill="rgba(255,255,255,0.08)"/>
-								</g>
-								<!-- Texte décoratif -->
-								<text class="deco-text" x="200" y="440" text-anchor="middle">DEPUIS 2009</text>
-							</svg>
-						</div>
+					<div class="about-image">
+						<img src="images/metal-fabrication-1024x702-975091580.jpg" alt="Notre atelier" onerror="this.parentElement.classList.add('placeholder');">
 					</div>
-					
 					<div class="about-content">
-						<header class="section-header">
-							<span class="section-num">03</span>
-							<h2 class="section-title">
-								<span class="title-small">À propos</span>
-								<span class="title-big">Notre philosophie</span>
-							</h2>
-						</header>
+						<span class="section-tag">À propos</span>
+						<h2>Notre savoir-faire à votre service</h2>
+						<p class="lead">EcoTelier est votre partenaire de confiance pour tous vos projets de fabrication métallique. Notre équipe d'experts combine savoir-faire artisanal et technologies modernes.</p>
+						<p>Nous concevons et réalisons des produits sur mesure : établis de rangement, tables industrielles, échelles à crinoline, mezzanines et bien d'autres structures selon vos besoins spécifiques.</p>
 						
-						<div class="about-text">
-							<p class="lead">Nous croyons que le métal peut être à la fois fonctionnel et beau. Chaque création est une expression de cette conviction.</p>
-							<p>EcoTelier combine savoir-faire artisanal et techniques modernes pour créer des pièces uniques. De la conception 3D à la finition, chaque étape est réalisée avec précision.</p>
-						</div>
-						
-						<div class="about-features">
+						<div class="features">
 							<div class="feature">
-								<span class="feature-icon">
+								<div class="feature-icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 										<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
 									</svg>
-								</span>
+								</div>
 								<div>
 									<strong>Conception 3D</strong>
-									<span>Visualisation avant fabrication</span>
+									<span>Modélisation avant réalisation</span>
 								</div>
 							</div>
 							<div class="feature">
-								<span class="feature-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-										<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-									</svg>
-								</span>
-								<div>
-									<strong>Fabrication</strong>
-									<span>Qualité artisanale</span>
-								</div>
-							</div>
-							<div class="feature">
-								<span class="feature-icon">
+								<div class="feature-icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
 										<polyline points="22 4 12 14.01 9 11.01"/>
 									</svg>
-								</span>
+								</div>
 								<div>
-									<strong>Garantie</strong>
-									<span>Durabilité assurée</span>
+									<strong>Qualité garantie</strong>
+									<span>Matériaux durables</span>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="feature-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<rect x="1" y="3" width="15" height="13"/>
+										<polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+										<circle cx="5.5" cy="18.5" r="2.5"/>
+										<circle cx="18.5" cy="18.5" r="2.5"/>
+									</svg>
+								</div>
+								<div>
+									<strong>Installation</strong>
+									<span>Livraison et pose</span>
 								</div>
 							</div>
 						</div>
@@ -529,39 +147,240 @@
 			</div>
 		</section>
 
-		<!-- TESTIMONIALS -->
-		<section class="section-testimonials">
+		<!-- Services Section -->
+		<section class="section section-services" id="services">
 			<div class="container">
-				<div class="testimonials-wrapper">
-					<div class="testimonial-card" id="testimonial-card">
-						<svg class="quote-icon" viewBox="0 0 40 40" fill="currentColor">
-							<path d="M10 25h5l3.33-6.67V10H10v8.33h5L10 25zm13.33 0h5l3.34-6.67V10H23.33v8.33h5L23.33 25z"/>
-						</svg>
-						<blockquote id="testimonial-text">
-							"EcoTelier a transformé notre espace avec des mezzanines parfaitement adaptées. La qualité est exceptionnelle."
+				<div class="section-header">
+					<span class="section-tag">Nos services</span>
+					<h2>Domaines d'expertise</h2>
+					<p>Des solutions métalliques adaptées à tous vos besoins professionnels et personnels.</p>
+				</div>
+				
+				<div class="services-grid">
+					<div class="service-card">
+						<div class="service-icon">
+							<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+								<rect x="8" y="24" width="48" height="4" rx="1"/>
+								<rect x="8" y="36" width="48" height="4" rx="1"/>
+								<rect x="14" y="20" width="4" height="24" rx="1"/>
+								<rect x="46" y="20" width="4" height="24" rx="1"/>
+								<rect x="28" y="40" width="8" height="16" rx="1"/>
+							</svg>
+						</div>
+						<h3>Mobilier Industriel</h3>
+						<p>Établis de rangement, tables industrielles robustes et mezzanines sur mesure pour optimiser vos espaces de travail et de stockage.</p>
+						<ul class="service-list">
+							<li>Établis professionnels</li>
+							<li>Tables industrielles</li>
+							<li>Mezzanines</li>
+							<li>Échelles à crinoline</li>
+						</ul>
+						<a href="#contact" class="service-link">En savoir plus →</a>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">
+							<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+								<circle cx="32" cy="18" r="8"/>
+								<path d="M32 26V54"/>
+								<path d="M20 34L32 26L44 34"/>
+								<circle cx="32" cy="18" r="3" fill="currentColor"/>
+							</svg>
+						</div>
+						<h3>Décoration Intérieure</h3>
+						<p>Guéridons, tables design, étagères et lustres au style industriel pour professionnels de l'événementiel et appartements meublés.</p>
+						<ul class="service-list">
+							<li>Guéridons design</li>
+							<li>Tables acier et bois</li>
+							<li>Étagères murales</li>
+							<li>Lustres industriels</li>
+						</ul>
+						<a href="#contact" class="service-link">En savoir plus →</a>
+					</div>
+					
+					<div class="service-card">
+						<div class="service-icon">
+							<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+								<path d="M8 56H56"/>
+								<path d="M14 56V36"/>
+								<path d="M50 56V36"/>
+								<path d="M8 36L32 20L56 36"/>
+								<path d="M22 36V48H30V36"/>
+								<path d="M34 36V48H42V36"/>
+							</svg>
+						</div>
+						<h3>Aménagement Extérieur</h3>
+						<p>Auvents, pergolas, garde-corps et mobilier de jardin pour embellir vos espaces extérieurs avec élégance et durabilité.</p>
+						<ul class="service-list">
+							<li>Pergolas sur mesure</li>
+							<li>Auvents métalliques</li>
+							<li>Garde-corps design</li>
+							<li>Mobilier de jardin</li>
+						</ul>
+						<a href="#contact" class="service-link">En savoir plus →</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Products Section -->
+		<section class="section section-products" id="produits">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-tag">Portfolio</span>
+					<h2>Nos réalisations</h2>
+					<p>Découvrez une sélection de nos créations métalliques, alliant robustesse et design contemporain.</p>
+				</div>
+				
+				<div class="products-grid">
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/table_manger.jpg" alt="Table Industrielle" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Table Industrielle</h4>
+							<span>Mobilier</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Étagère Métal.jpg" alt="Étagère Métal" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Étagère Métal</h4>
+							<span>Rangement</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Pergola.jpg" alt="Pergola" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Pergola</h4>
+							<span>Extérieur</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Mezzanine.jpg" alt="Mezzanine" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Mezzanine</h4>
+							<span>Structure</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Lustre.jpg" alt="Lustre Industriel" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Lustre Industriel</h4>
+							<span>Décoration</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Auvent.jpg" alt="Auvent" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Auvent</h4>
+							<span>Extérieur</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Garder-corps.jpg" alt="Garde-Corps" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Garde-Corps</h4>
+							<span>Sécurité</span>
+						</div>
+					</div>
+					
+					<div class="product-card">
+						<div class="product-image">
+							<img src="images/Etabli.jpg" alt="Établi de Rangement" onerror="this.parentElement.classList.add('placeholder');">
+						</div>
+						<div class="product-info">
+							<h4>Établi de Rangement</h4>
+							<span>Mobilier</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="section-cta">
+					<a href="#contact" class="btn btn-primary">Discuter de votre projet</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials Section -->
+		<section class="section section-testimonials" id="temoignages">
+			<div class="container">
+				<div class="section-header section-header-center">
+					<span class="section-tag">Témoignages</span>
+					<h2>Ce que disent nos clients</h2>
+				</div>
+				
+				<div class="testimonials-slider">
+					<div class="testimonial active" data-index="0">
+						<blockquote>
+							"EcoTelier a transformé notre espace de travail avec des établis et des mezzanines parfaitement adaptés à nos besoins. La qualité de fabrication est exceptionnelle et le service client irréprochable."
 						</blockquote>
 						<div class="testimonial-author">
-							<div class="author-avatar" id="author-avatar">KM</div>
+							<div class="author-avatar">KM</div>
 							<div class="author-info">
-								<strong id="author-name">Kofi Mensah</strong>
-								<span id="author-role">Directeur d'usine</span>
+								<strong>Kofi Mensah</strong>
+								<span>Directeur d'usine</span>
 							</div>
 						</div>
 					</div>
 					
-					<div class="testimonials-nav">
-						<button class="nav-btn" id="prev-btn" aria-label="Précédent">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<div class="testimonial" data-index="1">
+						<blockquote>
+							"Je recommande EcoTelier à tous mes clients. Leur mobilier au design industriel apporte une touche unique et moderne aux espaces. Un travail remarquable !"
+						</blockquote>
+						<div class="testimonial-author">
+							<div class="author-avatar">AA</div>
+							<div class="author-info">
+								<strong>Ama Asante</strong>
+								<span>Architecte d'intérieur</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="testimonial" data-index="2">
+						<blockquote>
+							"Les tables et étagères réalisées par EcoTelier ont donné à notre établissement le caractère industriel chic que nous recherchions. Solide, beau et durable."
+						</blockquote>
+						<div class="testimonial-author">
+							<div class="author-avatar">YB</div>
+							<div class="author-info">
+								<strong>Yaw Boateng</strong>
+								<span>Propriétaire de restaurant</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="testimonial-nav">
+						<button class="nav-btn prev" id="prev-btn" aria-label="Précédent">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 								<path d="M19 12H5M12 19l-7-7 7-7"/>
 							</svg>
 						</button>
-						<div class="nav-progress">
-							<span class="progress-current" id="progress-current">01</span>
-							<span class="progress-line"><span id="progress-bar"></span></span>
-							<span class="progress-total">03</span>
+						<div class="nav-dots">
+							<button class="dot active" data-index="0"></button>
+							<button class="dot" data-index="1"></button>
+							<button class="dot" data-index="2"></button>
 						</div>
-						<button class="nav-btn" id="next-btn" aria-label="Suivant">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<button class="nav-btn next" id="next-btn" aria-label="Suivant">
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 								<path d="M5 12h14M12 5l7 7-7 7"/>
 							</svg>
 						</button>
@@ -570,123 +389,115 @@
 			</div>
 		</section>
 
-		<!-- CTA -->
-		<section class="section-cta">
+		<!-- CTA Section -->
+		<section class="section section-cta-block">
 			<div class="container">
 				<div class="cta-content">
-					<h2>Votre projet<br><em>commence ici</em></h2>
-					<p>Partagez votre vision, nous la transformons en réalité métallique.</p>
-					<a href="#contact" class="btn-primary btn-large">
-						<span class="btn-text">Lancer votre projet</span>
-						<span class="btn-icon">
-							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-								<path d="M5 12h14M12 5l7 7-7 7"/>
-							</svg>
-						</span>
-					</a>
+					<h2>Construisons ensemble votre projet</h2>
+					<p>De l'idée à la réalisation, notre équipe vous accompagne à chaque étape pour créer des structures métalliques qui dépassent vos attentes.</p>
+					<a href="#contact" class="btn btn-white">Demander un devis gratuit</a>
 				</div>
-			</div>
-			<div class="cta-deco">
-				<span></span><span></span><span></span>
 			</div>
 		</section>
 
-		<!-- CONTACT -->
-		<section class="section-contact" id="contact">
+		<!-- Contact Section -->
+		<section class="section section-contact" id="contact">
 			<div class="container">
 				<div class="contact-grid">
 					<div class="contact-info">
-						<header class="section-header">
-							<span class="section-num">04</span>
-							<h2 class="section-title">
-								<span class="title-small">Contact</span>
-								<span class="title-big">Parlons projet</span>
-							</h2>
-						</header>
-						
-						<p class="contact-lead">Une idée ? Un projet ? Contactez-nous pour un devis gratuit et personnalisé.</p>
+						<span class="section-tag">Contact</span>
+						<h2>Parlons de votre projet</h2>
+						<p>Vous avez un projet ? Une question ? N'hésitez pas à nous contacter. Notre équipe vous répondra dans les plus brefs délais.</p>
 						
 						<div class="contact-details">
-							<a href="https://maps.google.com" target="_blank" class="contact-item">
-								<span class="contact-icon">
+							<div class="contact-item">
+								<div class="contact-icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 										<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
 										<circle cx="12" cy="10" r="3"/>
 									</svg>
-								</span>
-								<span class="contact-text">
+								</div>
+								<div>
 									<strong>Adresse</strong>
-									<span>Accra, Ghana</span>
-								</span>
-							</a>
-							<a href="tel:+233000000000" class="contact-item">
-								<span class="contact-icon">
+									<span>Yaounde, Centre, Cameroon</span>
+								</div>
+							</div>
+							
+							<div class="contact-item">
+								<div class="contact-icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+										<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
 									</svg>
-								</span>
-								<span class="contact-text">
+								</div>
+								<div>
 									<strong>Téléphone</strong>
-									<span>+233 00 000 0000</span>
-								</span>
-							</a>
-							<a href="mailto:contact@ecotelier.com" class="contact-item">
-								<span class="contact-icon">
+									<a href="tel:+237000000000">+237 00 000 0000</a>
+								</div>
+							</div>
+							
+							<div class="contact-item">
+								<div class="contact-icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
 										<rect x="2" y="4" width="20" height="16" rx="2"/>
 										<path d="m22 7-10 7L2 7"/>
 									</svg>
-								</span>
-								<span class="contact-text">
+								</div>
+								<div>
 									<strong>Email</strong>
-									<span>contact@ecotelier.com</span>
-								</span>
-							</a>
-						</div>
-						
-						<div class="social-links">
-							<a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-							<a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
-							<a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></a>
+									<a href="mailto:contact@ecotelier.com">contact@ecotelier.com</a>
+								</div>
+							</div>
+							
+							<div class="contact-item">
+								<div class="contact-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<circle cx="12" cy="12" r="10"/>
+										<polyline points="12 6 12 12 16 14"/>
+									</svg>
+								</div>
+								<div>
+									<strong>Horaires</strong>
+									<span>Lun - Ven: 8h - 18h<br>Sam: 9h - 14h</span>
+								</div>
+							</div>
 						</div>
 					</div>
 					
 					<div class="contact-form-wrapper">
-						<form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+						<form id="contact-form" action="https://formspree.io/f/xdaklznz" method="POST">
 							<div class="form-row">
 								<div class="form-group">
-									<label for="name">Nom</label>
-									<input type="text" id="name" name="name" required placeholder="Votre nom">
+									<label for="name">Nom complet *</label>
+									<input type="text" id="name" name="name" required>
 								</div>
 								<div class="form-group">
-									<label for="email">Email</label>
-									<input type="email" id="email" name="email" required placeholder="votre@email.com">
+									<label for="email">Email *</label>
+									<input type="email" id="email" name="email" required>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group">
+									<label for="phone">Téléphone</label>
+									<input type="tel" id="phone" name="phone">
+								</div>
+								<div class="form-group">
+									<label for="subject">Sujet *</label>
+									<select id="subject" name="subject" required>
+										<option value="">Sélectionner...</option>
+										<option value="devis">Demande de devis</option>
+										<option value="info">Demande d'information</option>
+										<option value="mobilier">Mobilier industriel</option>
+										<option value="decoration">Décoration intérieure</option>
+										<option value="exterieur">Aménagement extérieur</option>
+										<option value="autre">Autre</option>
+									</select>
 								</div>
 							</div>
 							<div class="form-group">
-								<label for="subject">Sujet</label>
-								<select id="subject" name="subject" required>
-									<option value="">Sélectionner...</option>
-									<option value="devis">Demande de devis</option>
-									<option value="mobilier">Mobilier industriel</option>
-									<option value="deco">Décoration</option>
-									<option value="exterieur">Aménagement extérieur</option>
-									<option value="autre">Autre</option>
-								</select>
+								<label for="message">Message *</label>
+								<textarea id="message" name="message" rows="5" required></textarea>
 							</div>
-							<div class="form-group">
-								<label for="message">Message</label>
-								<textarea id="message" name="message" required placeholder="Décrivez votre projet..."></textarea>
-							</div>
-							<button type="submit" class="btn-primary btn-full" id="submit-btn">
-								<span class="btn-text">Envoyer</span>
-								<span class="btn-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-										<line x1="22" y1="2" x2="11" y2="13"/>
-										<polygon points="22 2 15 22 11 13 2 9 22 2"/>
-									</svg>
-								</span>
-							</button>
+							<button type="submit" class="btn btn-primary btn-full">Envoyer le message</button>
 						</form>
 						<div id="form-status" class="form-status"></div>
 					</div>
@@ -695,35 +506,68 @@
 		</section>
 	</main>
 
+	<!-- Footer -->
 	<footer class="footer">
 		<div class="container">
-			<div class="footer-content">
+			<div class="footer-grid">
 				<div class="footer-brand">
-					<a href="#" class="logo">
-						<svg class="logo-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-							<rect class="logo-frame" x="4" y="4" width="52" height="52" rx="2" fill="none" stroke-width="2"/>
-							<g class="logo-letter">
-								<rect class="bar" x="16" y="14" width="28" height="4" rx="1"/>
-								<rect class="bar" x="16" y="28" width="20" height="4" rx="1"/>
-								<rect class="bar" x="16" y="42" width="28" height="4" rx="1"/>
-								<rect class="bar" x="16" y="14" width="4" height="32" rx="1"/>
-							</g>
-							<circle class="logo-dot" cx="48" cy="46" r="4"/>
-						</svg>
-						<span class="logo-name">EcoTelier</span>
+					<a href="index.html" class="logo">
+						<img src="images/logo-footer.png" alt="EcoTelier" class="logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+						<div class="logo-text" style="display:none;">
+							<span class="logo-eco">Eco</span><span class="logo-telier">Telier</span>
+						</div>
 					</a>
-					<p>L'art du métal sur mesure.<br>Design • Fabrication • Installation</p>
+					<p>Votre partenaire de confiance pour tous vos projets de fabrication métallique. Qualité, durabilité et design innovant.</p>
+					<div class="social-links">
+						<a href="#" aria-label="Facebook">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+						</a>
+						<a href="#" aria-label="Instagram">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg>
+						</a>
+						<a href="#" aria-label="LinkedIn">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>
+						</a>
+						<a href="#" aria-label="WhatsApp">
+							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+						</a>
+					</div>
 				</div>
-				<div class="footer-nav">
-					<a href="#work">Réalisations</a>
-					<a href="#services">Services</a>
-					<a href="#about">À propos</a>
-					<a href="#contact">Contact</a>
+				
+				<div class="footer-links">
+					<h4>Navigation</h4>
+					<ul>
+						<li><a href="#accueil">Accueil</a></li>
+						<li><a href="#apropos">À propos</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#produits">Produits</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div class="footer-links">
+					<h4>Services</h4>
+					<ul>
+						<li><a href="#services">Mobilier industriel</a></li>
+						<li><a href="#services">Décoration intérieure</a></li>
+						<li><a href="#services">Aménagement extérieur</a></li>
+						<li><a href="#contact">Devis gratuit</a></li>
+					</ul>
+				</div>
+				
+				<div class="footer-newsletter">
+					<h4>Newsletter</h4>
+					<p>Recevez nos actualités et offres spéciales</p>
+					<form class="newsletter-form">
+						<input type="email" placeholder="Votre email" required>
+						<button type="submit">S'abonner</button>
+					</form>
 				</div>
 			</div>
+			
 			<div class="footer-bottom">
-				<p>&copy; 2025 EcoTelier. Tous droits réservés.</p>
-				<p>Fabriqué avec passion à Accra</p>
+				<p>© 2025 EcoTelier. Tous droits réservés.</p>
+				<p>Fabrication métallique sur mesure • Yaounde, Cameroon</p>
 			</div>
 		</div>
 	</footer>
