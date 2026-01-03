@@ -3,6 +3,73 @@
    Elegant, Readable, Mature Audience
    =========================================== */
 
+
+.bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60vh;
+	min-height: 480px;
+	background: url("../images/key-bg.jpg") center center / cover no-repeat;
+	z-index: 0;
+}
+
+.bg-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* Subtle dark overlay to improve contrast */
+	background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 60%);
+	z-index: 1;
+}
+
+.top-block {
+	position: relative;
+	z-index: 2; /* place content above bg */
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.top-block .content-width {
+	position: relative;
+	z-index: 2;
+}
+
+.top-block h1 {
+	color: #ffffff;
+	font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+	line-height: 0.95;
+	text-transform: uppercase;
+	text-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.tagline {
+	color: rgba(255,255,255,0.95);
+	font-weight: 700;
+	font-size: 1.125rem;
+	letter-spacing: 1px;
+	margin-top: 12px;
+}
+
+.main-info > p:not(.tagline) {
+	color: rgba(255,255,255,0.92);
+	font-size: 1.05rem;
+	max-width: 760px;
+}
+
+.menu-wrapper {
+	background: rgba(255,255,255,0.82); /* keep header readable but let hero show */
+}
+
+@media screen and (max-width: 767px) {
+	.bg-image { height: 48vh; min-height: 420px; }
+	.top-block h1 { font-size: 2.4rem; text-align: center; }
+	.main-info { text-align: center; }
+}
+
 :root {
 	/* Colors - Professional & Warm */
 	--primary: #1e3a5f;
