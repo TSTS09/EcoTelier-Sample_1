@@ -32,11 +32,23 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mettre à jour l'état des boutons
     function updateButtons() {
-        // Garder les boutons visibles et actifs (boucle gérée dans les handlers)
-        btnLeft.style.background = '#f73131';
-        btnLeft.style.cursor = 'pointer';
-        btnRight.style.background = '#f73131';
-        btnRight.style.cursor = 'pointer';
+        // Bouton gauche
+        if (currentIndex === 0) {
+            btnLeft.style.background = 'rgba(255, 255, 255, 0.1)';
+            btnLeft.style.cursor = 'default';
+        } else {
+            btnLeft.style.background = '#f73131';
+            btnLeft.style.cursor = 'pointer';
+        }
+        
+        // Bouton droit
+        if (currentIndex === totalSlides - 1) {
+            btnRight.style.background = 'rgba(255, 255, 255, 0.1)';
+            btnRight.style.cursor = 'default';
+        } else {
+            btnRight.style.background = '#f73131';
+            btnRight.style.cursor = 'pointer';
+        }
     }
     
     // Afficher un slide
@@ -72,21 +84,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 400);
     }
     
-    // Événement bouton suivant (avec boucle)
+    // Événement bouton suivant
     btnRight.addEventListener('click', function() {
         if (currentIndex < totalSlides - 1) {
             showSlide(currentIndex + 1);
-        } else {
-            showSlide(0);
         }
     });
     
-    // Événement bouton précédent (avec boucle)
+    // Événement bouton précédent
     btnLeft.addEventListener('click', function() {
         if (currentIndex > 0) {
             showSlide(currentIndex - 1);
-        } else {
-            showSlide(totalSlides - 1);
         }
     });
     
@@ -163,14 +171,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (sectionComments) {
         sectionComments.addEventListener('mouseenter', stopAutoPlay);
         sectionComments.addEventListener('mouseleave', function() {
-            // Reprendre l'auto-play après que l'utilisateur quitte la section
-            startAutoPlay();
+            // Décommenter pour activer l'auto-play
+            // startAutoPlay();
         });
     }
     
     // Initialiser
     initSlider();
-
-    // Activer l'auto-play au démarrage (boucle continue)
-    startAutoPlay();
+    
+    // Décommenter pour activer l'auto-play au démarrage
+    // startAutoPlay();
 });
