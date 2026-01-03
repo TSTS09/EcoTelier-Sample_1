@@ -40,8 +40,9 @@
 			<div class="menu-wrapper">
 				<div class="content-header">
 					<div class="logo">
-						<a href="index.html">
-							<div class="logo-text">
+						<a href="index.html" aria-label="EcoTelier - Accueil">
+							<img src="images/logo.png" alt="EcoTelier logo" class="logo-img">
+							<div class="logo-text-fallback" aria-hidden="true">
 								<span class="logo-eco">ECO</span><span class="logo-telier">TELIER</span>
 							</div>
 						</a>
@@ -73,7 +74,7 @@
 				<div class="bg-overlay"></div>
 			</div>
 			
-			<section class="top-block" id="accueil">
+			<section class="top-block reveal" id="accueil">
 				<div class="content-width">
 					<div class="main-info">
 						<h1>ECO<br><span>TELIER</span></h1>
@@ -85,7 +86,7 @@
 						</div>
 					</div>
 					<div class="hero-features">
-						<div class="feature-card">
+						<div class="feature-card reveal">
 							<div class="feature-icon">
 								<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#f73131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -96,7 +97,7 @@
 							<h4>Sur Mesure</h4>
 							<p>Chaque projet est unique</p>
 						</div>
-						<div class="feature-card">
+						<div class="feature-card reveal">
 							<div class="feature-icon">
 								<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#f73131" stroke-width="2"/>
@@ -106,7 +107,7 @@
 							<h4>Qualité Garantie</h4>
 							<p>Matériaux premium</p>
 						</div>
-						<div class="feature-card">
+						<div class="feature-card reveal">
 							<div class="feature-icon">
 								<svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="#f73131" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -120,21 +121,16 @@
 				</div>
 			</section>
 
-			<section class="section-about" id="apropos">
+			<section class="section-about reveal" id="apropos">
 				<div class="content-width">
 					<header class="about-header">
 						<h3><span class="span-about">À propos</span> d'EcoTelier</h3>
 						<div class="red-border"></div>
 					</header>
-					<div class="about-content">
-						<div class="about-image">
+					<div class="about-content reveal">
+						<div class="about-image reveal">
 							<div class="about-img-placeholder">
-								<svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M14.7 6.3C14.5 6.1 14.3 6 14 6H10C9.7 6 9.5 6.1 9.3 6.3L6.3 9.3C6.1 9.5 6 9.7 6 10V14C6 14.3 6.1 14.5 6.3 14.7L9.3 17.7C9.5 17.9 9.7 18 10 18H14C14.3 18 14.5 17.9 14.7 17.7L17.7 14.7C17.9 14.5 18 14.3 18 14V10C18 9.7 17.9 9.5 17.7 9.3L14.7 6.3Z" stroke="#031652" stroke-width="2"/>
-									<path d="M12 10V14" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-									<path d="M10 12H14" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-								</svg>
-								<span>Fabrication Métallique</span>
+								<img src="images/metal-fabrication-1024x702-975091580.jpg" alt="Fabrication Métallique" class="about-img-real">
 							</div>
 						</div>
 						<div class="text-block">
@@ -153,14 +149,14 @@
 				</div>
 			</section>
 
-			<section class="section-services" id="services">
+			<section class="section-services reveal" id="services">
 				<div class="content-width">
 					<header class="about-header-left">
 						<h3>Nos Services</h3>
 						<div class="red-border"></div>
 					</header>
 					<ul class="service-list">
-						<li>
+						<li class="reveal">
 							<div class="service-icon">
 								<svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect x="3" y="3" width="18" height="18" rx="2" stroke="#031652" stroke-width="2"/>
@@ -172,7 +168,7 @@
 							<p class="service-text">Établis de rangement, tables industrielles robustes et mezzanines sur mesure pour optimiser vos espaces de travail et de stockage.</p>
 							<a href="#contact">En savoir plus</a>
 						</li>
-						<li>
+						<li class="reveal">
 							<div class="service-icon">
 								<svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#031652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -184,7 +180,7 @@
 							<p class="service-text">Guéridons, tables design, étagères et lustres au style industriel pour les professionnels de l'événementiel et les appartements meublés.</p>
 							<a href="#contact">En savoir plus</a>
 						</li>
-						<li>
+						<li class="reveal">
 							<div class="service-icon">
 								<svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M3 21H21" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
@@ -200,7 +196,7 @@
 				</div>
 			</section>
 
-			<section class="section-products" id="produits">
+			<section class="section-products reveal" id="produits">
 				<div class="content-width">
 					<header class="about-header-left">
 						<h3>Nos Réalisations</h3>
@@ -211,67 +207,57 @@
 					</div>
 					<ul class="gallery">
 						<li>
-							<div class="product-card">
-								<div class="product-placeholder">
-									<img class="product-img" src="images/drills-1.png" alt="Table Industrielle">
-								</div>
+							<div class="product-card reveal">
+									<div class="product-placeholder">
+										<img class="product-img" src="images/table_manger.jpg" alt="Table Industrielle">
+									</div>
 								<span>Table Industrielle</span>
 							</div>
 						</li>
 						<li>
-							<div class="product-card">
+							<div class="product-card reveal">
 								<div class="product-placeholder">
-									<img class="product-img" src="images/drills-2.png" alt="Étagère Métal">
+									<img class="product-img" src="images/Étagère Métal.jpg" alt="Étagère Métal">
 								</div>
 								<span>Étagère Métal</span>
 							</div>
 						</li>
 						<li>
-							<div class="product-card">
+							<div class="product-card reveal">
 								<div class="product-placeholder">
-									<img class="product-img" src="images/drills-3.png" alt="Pergola">
+									<img class="product-img" src="images/Pergola.jpg" alt="Pergola">
 								</div>
 								<span>Pergola</span>
 							</div>
 						</li>
 						<li>
-							<div class="product-card">
+							<div class="product-card reveal">
 								<div class="product-placeholder">
-									<img class="product-img" src="images/metal-things.png" alt="Mezzanine">
+									<img class="product-img" src="images/Mezzanine.jpg" alt="Mezzanine">
 								</div>
 								<span>Mezzanine</span>
 							</div>
 						</li>
 						<li>
-							<div class="product-card">
+							<div class="product-card reveal">
 								<div class="product-placeholder">
-									<img class="product-img" src="images/metal-rings.png" alt="Lustre Industriel">
+									<img class="product-img" src="images/Lustre.jpg" alt="Lustre Industriel">
 								</div>
 								<span>Lustre Industriel</span>
 							</div>
 						</li>
 						<li>
-							<div class="product-card">
+							<div class="product-card reveal">
 								<div class="product-placeholder">
-									<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M4 21H20" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-										<path d="M6 21V11" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-										<path d="M18 21V11" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-										<path d="M6 11L12 5L18 11" stroke="#031652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>
+									<img class="product-img" src="images/Auvent.jpg" alt="Auvent">
 								</div>
 								<span>Auvent</span>
 							</div>
 						</li>
 						<li>
-							<div class="product-card">
+							<div class="product-card reveal">
 								<div class="product-placeholder">
-									<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M4 6H20V18H4V6Z" stroke="#031652" stroke-width="2"/>
-										<path d="M8 6V18" stroke="#031652" stroke-width="2"/>
-										<path d="M12 6V18" stroke="#031652" stroke-width="2"/>
-										<path d="M16 6V18" stroke="#031652" stroke-width="2"/>
-									</svg>
+									<img class="product-img" src="images/Garder-corps.jpg" alt="Garde-Corps">
 								</div>
 								<span>Garde-Corps</span>
 							</div>
@@ -279,12 +265,7 @@
 						<li>
 							<div class="product-card">
 								<div class="product-placeholder">
-									<svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M5 12H19" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-										<path d="M5 6L12 3L19 6" stroke="#031652" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-										<path d="M7 6V21" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-										<path d="M17 6V21" stroke="#031652" stroke-width="2" stroke-linecap="round"/>
-									</svg>
+									<img class="product-img" src="images/Etabli.jpg" alt="Établi de Rangement">
 								</div>
 								<span>Établi de Rangement</span>
 							</div>
@@ -294,7 +275,7 @@
 				</div>
 			</section>
 
-			<section class="section-comments" id="temoignages">
+			<section class="section-comments reveal" id="temoignages">
 				<div class="content-width">
 					<div class="buttons"><button id="btn-left"><span>←</span></button></div>
 					<div class="feedback-block">
@@ -324,7 +305,7 @@
 				</div>
 			</section>
 
-			<section class="key">
+			<section class="key reveal">
 				<div class="key__content-width content-width">
 					<div class="key__text-block">
 						<div class="key__header"><h2>Construisons ensemble votre projet</h2></div>
@@ -334,7 +315,7 @@
 				</div>
 			</section>
 
-			<section class="touch" id="contact">
+			<section class="touch reveal" id="contact">
 				<div class="touch__content-width content-width">
 					<div class="touch__about-header-left about-header-left">
 						<h3>Contactez-nous</h3>
@@ -443,7 +424,7 @@
 					<div class="info">
 						<div class="info__logo">
 							<div class="footer-logo">
-								<span class="logo-eco">ECO</span><span class="logo-telier-footer">TELIER</span>
+								<img src="images/logo-footer.png" alt="EcoTelier" class="footer-logo-img">
 							</div>
 							<p class="info__text">Votre partenaire de confiance pour tous vos projets de fabrication métallique. Qualité, durabilité et design innovant depuis notre atelier.</p>
 						</div>
@@ -527,6 +508,7 @@
 		</footer>
 
 		<script src="js/menu-focus.js"></script>
+			<script src="js/animations.js"></script>
 		<script src="js/slider-feedback.js"></script>
 		<script src="js/contact-form.js"></script>
 	</body>

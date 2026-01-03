@@ -124,7 +124,7 @@ h4 {
    =========================================== */
 
 .menu-wrapper {
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(255, 255, 255, 0.82);
 	backdrop-filter: blur(10px);
 	position: sticky;
 	top: 0;
@@ -143,6 +143,51 @@ h4 {
 .logo-text {
 	display: flex;
 	align-items: center;
+}
+
+/* Logo image styling and subtle reveal animation */
+.logo-img {
+	height: 54px;
+	display: block;
+	transition: transform 450ms cubic-bezier(.2,.9,.2,1), opacity 450ms ease;
+	opacity: 0;
+	transform: translateY(-6px) scale(0.98);
+}
+.footer-logo-img {
+	height: 42px;
+	display: block;
+}
+.logo-animate {
+	opacity: 1 !important;
+	transform: translateY(0) scale(1) !important;
+}
+
+/* Section reveal: minimalist slide-up + fade */
+.reveal {
+	opacity: 0;
+	transform: translateY(18px);
+	transition: opacity 520ms ease, transform 520ms ease;
+}
+.reveal.inview {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Subtle icon micro-interactions */
+.feature-icon svg,
+.service-icon svg {
+	transition: transform 320ms ease, opacity 320ms ease;
+}
+.feature-card:hover .feature-icon svg,
+.service-list li:hover .service-icon svg {
+	transform: translateY(-6px) rotate(-6deg);
+	opacity: 0.95;
+}
+
+/* Slight parallax effect for hero overlay when scrolling */
+.bg-overlay {
+	background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+	mix-blend-mode: multiply;
 }
 
 .logo-eco {
@@ -434,6 +479,15 @@ main {
 	color: var(--primary-dark);
 	text-transform: uppercase;
 	letter-spacing: 1px;
+}
+
+/* Ensure the about image fills the placeholder and looks good */
+.about-img-placeholder .about-img-real {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	display: block;
 }
 
 .text-block {
