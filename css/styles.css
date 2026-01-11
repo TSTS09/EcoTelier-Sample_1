@@ -945,6 +945,26 @@ h1 em, h2 em {
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+.form-header {
+	text-align: center;
+	margin-bottom: 28px;
+	padding-bottom: 20px;
+	border-bottom: 2px dashed var(--gray-200);
+}
+
+.form-header h3 {
+	font-family: var(--font-heading);
+	font-size: 1.5rem;
+	color: var(--primary-dark);
+	margin-bottom: 8px;
+}
+
+.form-header p {
+	color: var(--text-light);
+	font-size: 1rem;
+	margin: 0;
+}
+
 .form-row {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -1041,6 +1061,10 @@ h1 em, h2 em {
 	margin-bottom: 20px;
 }
 
+.footer-brand .logo-icon {
+	background: linear-gradient(135deg, var(--accent) 0%, #e07352 100%);
+}
+
 .footer-brand .logo-eco,
 .footer-brand .logo-telier {
 	color: var(--white);
@@ -1048,6 +1072,10 @@ h1 em, h2 em {
 
 .footer-brand .logo-telier {
 	color: var(--accent);
+}
+
+.footer-brand .logo-tagline {
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-brand p {
@@ -1386,6 +1414,41 @@ h1 em, h2 em {
 	fill: white;
 }
 
+/* WhatsApp Tooltip */
+.whatsapp-tooltip {
+	position: absolute;
+	right: 75px;
+	background: #1e3a5f;
+	color: white;
+	padding: 10px 16px;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(10px);
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp-tooltip::after {
+	content: '';
+	position: absolute;
+	right: -8px;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 8px solid transparent;
+	border-left-color: #1e3a5f;
+	border-right: none;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+}
+
 @keyframes pulse {
 	0% {
 		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
@@ -1447,27 +1510,86 @@ h1 em, h2 em {
 }
 
 /* Improved Logo Text */
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.logo-icon {
+	width: 42px;
+	height: 42px;
+	background: linear-gradient(135deg, var(--accent) 0%, #e07352 100%);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 12px rgba(196, 90, 59, 0.3);
+}
+
+.logo-icon svg {
+	width: 28px;
+	height: 28px;
+	color: white;
+}
+
 .logo-text {
 	display: flex;
-	align-items: baseline;
-	gap: 2px;
+	flex-direction: column;
+	line-height: 1.1;
 }
 
 .logo-eco {
 	font-family: var(--font-heading);
-	font-size: 2rem;
+	font-size: 1.6rem;
 	font-weight: 700;
 	color: var(--primary);
+	letter-spacing: -0.5px;
 }
 
 .logo-telier {
 	font-family: var(--font-heading);
-	font-size: 2rem;
-	font-weight: 600;
+	font-size: 1.6rem;
+	font-weight: 700;
 	color: var(--accent);
+	letter-spacing: -0.5px;
+	margin-left: 2px;
+}
+
+.logo-tagline {
+	font-family: var(--font-body);
+	font-size: 0.7rem;
+	font-weight: 500;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-top: 2px;
+}
+
+.logo-text > span:first-child,
+.logo-text > span:nth-child(2) {
+	display: inline;
 }
 
 @media (max-width: 768px) {
+	.logo-icon {
+		width: 36px;
+		height: 36px;
+	}
+	
+	.logo-icon svg {
+		width: 22px;
+		height: 22px;
+	}
+	
+	.logo-eco, .logo-telier {
+		font-size: 1.3rem;
+	}
+	
+	.logo-tagline {
+		font-size: 0.6rem;
+	}
+	
 	.contact-banner-content {
 		flex-direction: column;
 		gap: 12px;
@@ -1480,5 +1602,97 @@ h1 em, h2 em {
 	.whatsapp-float {
 		bottom: 20px;
 		right: 20px;
+	}
+}
+
+/* ===========================================
+   WhatsApp Top Banner (appears at top of page)
+   =========================================== */
+
+.whatsapp-banner {
+	background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+	padding: 12px 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.whatsapp-banner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	opacity: 0.5;
+}
+
+.whatsapp-banner-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 1;
+}
+
+.whatsapp-banner-text {
+	color: white;
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+.wave-emoji {
+	display: inline-block;
+	animation: wave 1.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+	0%, 100% { transform: rotate(0deg); }
+	25% { transform: rotate(20deg); }
+	75% { transform: rotate(-15deg); }
+}
+
+.whatsapp-banner-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: white;
+	color: #128C7E;
+	padding: 10px 24px;
+	border-radius: 50px;
+	font-weight: 700;
+	font-size: 1rem;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.whatsapp-banner-btn:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.whatsapp-banner-btn svg {
+	width: 22px;
+	height: 22px;
+	fill: #25D366;
+}
+
+@media (max-width: 768px) {
+	.whatsapp-banner-content {
+		flex-direction: column;
+		gap: 10px;
+	}
+	
+	.whatsapp-banner-text {
+		font-size: 0.95rem;
+		text-align: center;
+	}
+	
+	.whatsapp-banner-btn {
+		padding: 12px 28px;
+		font-size: 1rem;
 	}
 }
