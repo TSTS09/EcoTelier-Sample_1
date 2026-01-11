@@ -106,14 +106,14 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 18px;
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: var(--font-body);
-	font-size: 1rem;
-	line-height: 1.7;
+	font-size: 1.1rem;
+	line-height: 1.8;
 	color: var(--text);
 	background: var(--white);
 	-webkit-font-smoothing: antialiased;
@@ -177,7 +177,7 @@ h1 em, h2 em {
 }
 
 .lead {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 	color: var(--text-light);
 }
 
@@ -189,12 +189,12 @@ h1 em, h2 em {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 14px 32px;
+	padding: 18px 36px;
 	font-family: var(--font-body);
-	font-size: 0.95rem;
+	font-size: 1.1rem;
 	font-weight: 600;
 	border: none;
-	border-radius: 6px;
+	border-radius: 8px;
 	cursor: pointer;
 	transition: all var(--transition);
 }
@@ -254,9 +254,9 @@ h1 em, h2 em {
 .top-link {
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 10px;
 	color: rgba(255, 255, 255, 0.8);
-	font-size: 0.875rem;
+	font-size: 1rem;
 }
 
 .top-link:hover {
@@ -417,9 +417,9 @@ h1 em, h2 em {
 }
 
 .hero p {
-	font-size: 1.125rem;
-	color: rgba(255,255,255,0.92);
-	margin-bottom: 32px;
+	font-size: 1.3rem;
+	color: rgba(255,255,255,0.95);
+	margin-bottom: 36px;
 	max-width: 720px;
 }
 
@@ -621,11 +621,11 @@ h1 em, h2 em {
 }
 
 .service-list li {
-	padding: 8px 0;
-	padding-left: 20px;
+	padding: 10px 0;
+	padding-left: 24px;
 	position: relative;
 	color: var(--text);
-	font-size: 0.95rem;
+	font-size: 1.05rem;
 }
 
 .service-list li::before {
@@ -755,10 +755,10 @@ h1 em, h2 em {
 
 .testimonial blockquote {
 	font-family: var(--font-heading);
-	font-size: 1.5rem;
+	font-size: 1.65rem;
 	font-weight: 500;
-	line-height: 1.6;
-	margin-bottom: 32px;
+	line-height: 1.7;
+	margin-bottom: 36px;
 	font-style: italic;
 	color: rgba(255, 255, 255, 0.95);
 }
@@ -922,14 +922,14 @@ h1 em, h2 em {
 
 .contact-item strong {
 	display: block;
-	font-size: 0.95rem;
+	font-size: 1.1rem;
 	color: var(--primary-dark);
-	margin-bottom: 2px;
+	margin-bottom: 4px;
 }
 
 .contact-item span,
 .contact-item a {
-	font-size: 0.9rem;
+	font-size: 1.05rem;
 	color: var(--text-light);
 }
 
@@ -967,13 +967,13 @@ h1 em, h2 em {
 .form-group select,
 .form-group textarea {
 	width: 100%;
-	padding: 14px 16px;
+	padding: 16px 18px;
 	background: var(--off-white);
 	border: 1px solid var(--gray-200);
 	border-radius: 8px;
 	color: var(--text);
 	font-family: var(--font-body);
-	font-size: 1rem;
+	font-size: 1.1rem;
 	transition: all var(--transition);
 }
 
@@ -1041,8 +1041,13 @@ h1 em, h2 em {
 	margin-bottom: 20px;
 }
 
-.footer-brand .logo-eco {
+.footer-brand .logo-eco,
+.footer-brand .logo-telier {
 	color: var(--white);
+}
+
+.footer-brand .logo-telier {
+	color: var(--accent);
 }
 
 .footer-brand p {
@@ -1311,6 +1316,10 @@ h1 em, h2 em {
 }
 
 @media (max-width: 480px) {
+	html {
+		font-size: 17px;
+	}
+	
 	.products-grid {
 		grid-template-columns: 1fr;
 	}
@@ -1320,6 +1329,156 @@ h1 em, h2 em {
 	}
 	
 	.testimonial blockquote {
-		font-size: 1.25rem;
+		font-size: 1.35rem;
+	}
+	
+	.btn {
+		padding: 16px 28px;
+		font-size: 1.05rem;
+		width: 100%;
+	}
+	
+	.hero-buttons {
+		flex-direction: column;
+		gap: 12px;
+	}
+	
+	.whatsapp-float {
+		width: 65px;
+		height: 65px;
+	}
+	
+	.whatsapp-float svg {
+		width: 36px;
+		height: 36px;
+	}
+}
+
+/* ===========================================
+   WhatsApp Floating Button
+   =========================================== */
+
+.whatsapp-float {
+	position: fixed;
+	bottom: 24px;
+	right: 24px;
+	width: 60px;
+	height: 60px;
+	background: #25D366;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+	z-index: 1000;
+	transition: all 0.3s ease;
+	animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+	transform: scale(1.1);
+	box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-float svg {
+	width: 32px;
+	height: 32px;
+	fill: white;
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+	}
+	50% {
+		box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
+	}
+	100% {
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+	}
+}
+
+/* Contact CTA Banner */
+.contact-banner {
+	background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+	padding: 20px;
+	text-align: center;
+	position: relative;
+}
+
+.contact-banner-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.contact-banner p {
+	color: white;
+	font-size: 1.15rem;
+	font-weight: 500;
+	margin: 0;
+}
+
+.contact-banner .btn-whatsapp {
+	background: #25D366;
+	color: white;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 14px 28px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.contact-banner .btn-whatsapp:hover {
+	background: #1fb855;
+	transform: translateY(-2px);
+}
+
+.contact-banner .btn-whatsapp svg {
+	width: 24px;
+	height: 24px;
+	fill: white;
+}
+
+/* Improved Logo Text */
+.logo-text {
+	display: flex;
+	align-items: baseline;
+	gap: 2px;
+}
+
+.logo-eco {
+	font-family: var(--font-heading);
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--primary);
+}
+
+.logo-telier {
+	font-family: var(--font-heading);
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--accent);
+}
+
+@media (max-width: 768px) {
+	.contact-banner-content {
+		flex-direction: column;
+		gap: 12px;
+	}
+	
+	.contact-banner p {
+		font-size: 1.05rem;
+	}
+	
+	.whatsapp-float {
+		bottom: 20px;
+		right: 20px;
 	}
 }
