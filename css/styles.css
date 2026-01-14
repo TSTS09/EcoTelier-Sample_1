@@ -1,81 +1,16 @@
 /* ===========================================
    EcoTelier - Clean Professional Design
-   Elegant, Readable, Mature Audience
+   Elegant, Readable, Eco-Focused
    =========================================== */
 
-
-.bg-image {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 60vh;
-	min-height: 480px;
-	background: url("../images/key-bg.jpg") center center / cover no-repeat;
-	z-index: 0;
-}
-
-.bg-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	/* Subtle dark overlay to improve contrast */
-	background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.20) 60%);
-	z-index: 1;
-}
-
-.top-block {
-	position: relative;
-	z-index: 2; /* place content above bg */
-	padding-top: 80px;
-	padding-bottom: 80px;
-}
-
-.top-block .content-width {
-	position: relative;
-	z-index: 2;
-}
-
-.top-block h1 {
-	color: #ffffff;
-	font-size: clamp(2.8rem, 6.5vw, 4.8rem);
-	line-height: 0.95;
-	text-transform: uppercase;
-	text-shadow: 0 10px 30px rgba(0,0,0,0.45);
-}
-
-.tagline {
-	color: rgba(255,255,255,0.95);
-	font-weight: 700;
-	font-size: 1.125rem;
-	letter-spacing: 1px;
-	margin-top: 12px;
-}
-
-.main-info > p:not(.tagline) {
-	color: rgba(255,255,255,0.92);
-	font-size: 1.05rem;
-	max-width: 760px;
-}
-
-.menu-wrapper {
-	background: rgba(255,255,255,0.82); /* keep header readable but let hero show */
-}
-
-@media screen and (max-width: 767px) {
-	.bg-image { height: 48vh; min-height: 420px; }
-	.top-block h1 { font-size: 2.4rem; text-align: center; }
-	.main-info { text-align: center; }
-}
-
 :root {
-	/* Colors - Professional & Warm */
+	/* Colors - Professional & Eco */
 	--primary: #1e3a5f;
 	--primary-dark: #152a45;
 	--accent: #c45a3b;
 	--accent-hover: #a84d32;
+	--eco-green: #2e7d32;
+	--eco-green-light: #4caf50;
 	
 	--text: #2d3748;
 	--text-light: #4a5568;
@@ -106,14 +41,14 @@
 }
 
 html {
-	font-size: 18px;
+	font-size: 16px;
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: var(--font-body);
-	font-size: 1.1rem;
-	line-height: 1.8;
+	font-size: 1rem;
+	line-height: 1.7;
 	color: var(--text);
 	background: var(--white);
 	-webkit-font-smoothing: antialiased;
@@ -172,12 +107,12 @@ h4 {
 }
 
 h1 em, h2 em {
-	color: var(--accent);
+	color: var(--eco-green);
 	font-style: normal;
 }
 
 .lead {
-	font-size: 1.25rem;
+	font-size: 1.125rem;
 	color: var(--text-light);
 }
 
@@ -189,12 +124,12 @@ h1 em, h2 em {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 18px 36px;
+	padding: 14px 32px;
 	font-family: var(--font-body);
-	font-size: 1.1rem;
+	font-size: 0.95rem;
 	font-weight: 600;
 	border: none;
-	border-radius: 8px;
+	border-radius: 6px;
 	cursor: pointer;
 	transition: all var(--transition);
 }
@@ -254,9 +189,9 @@ h1 em, h2 em {
 .top-link {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 8px;
 	color: rgba(255, 255, 255, 0.8);
-	font-size: 1rem;
+	font-size: 0.875rem;
 }
 
 .top-link:hover {
@@ -306,14 +241,14 @@ h1 em, h2 em {
 	font-family: var(--font-heading);
 	font-size: 1.75rem;
 	font-weight: 700;
-	color: var(--primary);
+	color: var(--eco-green);
 }
 
 .logo-telier {
 	font-family: var(--font-heading);
 	font-size: 1.75rem;
 	font-weight: 600;
-	color: var(--accent);
+	color: var(--primary);
 }
 
 /* Navigation */
@@ -371,19 +306,11 @@ h1 em, h2 em {
 
 .hero {
 	position: relative;
-	min-height: 60vh;
+	min-height: 600px;
 	display: flex;
 	align-items: center;
-	background: url("../images/key-bg.jpg") center center / cover no-repeat;
+	background: linear-gradient(135deg, var(--off-white) 0%, var(--gray-100) 100%);
 	overflow: hidden;
-}
-
-.hero::before {
-	content: '';
-	position: absolute;
-	inset: 0;
-	background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.18) 60%);
-	z-index: 1;
 }
 
 .hero .container {
@@ -394,39 +321,76 @@ h1 em, h2 em {
 }
 
 .hero-content {
-	max-width: 680px;
-	position: relative;
-	z-index: 3; /* stay above overlay */
+	max-width: 620px;
 }
 
-.hero-tag {
-	display: inline-block;
+/* Eco Badge */
+.eco-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: rgba(46, 125, 50, 0.1);
+	border: 1px solid rgba(46, 125, 50, 0.3);
+	color: var(--eco-green);
+	padding: 8px 16px;
+	border-radius: 50px;
 	font-size: 0.875rem;
 	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: var(--accent);
-	margin-bottom: 16px;
+	margin-bottom: 20px;
+}
+
+.eco-badge svg {
+	stroke: var(--eco-green);
 }
 
 .hero h1 {
 	margin-bottom: 24px;
-	color: #fff;
-	font-size: clamp(2.4rem, 6vw, 4.2rem);
-	line-height: 1.02;
 }
 
-.hero p {
-	font-size: 1.3rem;
-	color: rgba(255,255,255,0.95);
-	margin-bottom: 36px;
-	max-width: 720px;
+.hero-lead {
+	font-size: 1.125rem;
+	color: var(--text-light);
+	margin-bottom: 32px;
+	line-height: 1.8;
+}
+
+.hero-lead strong {
+	color: var(--eco-green);
 }
 
 .hero-buttons {
 	display: flex;
 	gap: 16px;
 	flex-wrap: wrap;
+	margin-bottom: 40px;
+}
+
+/* Hero Stats */
+.hero-stats {
+	display: flex;
+	gap: 32px;
+	padding-top: 32px;
+	border-top: 1px solid var(--gray-200);
+}
+
+.stat {
+	text-align: center;
+}
+
+.stat-number {
+	display: block;
+	font-family: var(--font-heading);
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--eco-green);
+	line-height: 1;
+}
+
+.stat-label {
+	font-size: 0.875rem;
+	color: var(--text-muted);
+	margin-top: 4px;
+	display: block;
 }
 
 .hero-image {
@@ -438,9 +402,19 @@ h1 em, h2 em {
 	overflow: hidden;
 }
 
-.hero-image {
-	display: none; /* background image is now on the hero section */
+.hero-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
+
+.hero-image.no-image {
+	background: linear-gradient(135deg, var(--gray-200) 0%, var(--gray-300) 100%);
+}
+
+/* ===========================================
+   Sections Common
+   =========================================== */
 
 .section {
 	padding: var(--section-padding) 0;
@@ -452,7 +426,7 @@ h1 em, h2 em {
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: var(--accent);
+	color: var(--eco-green);
 	margin-bottom: 12px;
 }
 
@@ -478,67 +452,46 @@ h1 em, h2 em {
 }
 
 /* ===========================================
-   About Section
+   Eco Commitment Section
    =========================================== */
 
-.section-about {
+.section-eco {
 	background: var(--white);
 }
 
-.about-grid {
+.eco-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1.2fr 1fr;
 	gap: 80px;
 	align-items: center;
 }
 
-.about-image {
-	border-radius: 12px;
-	overflow: hidden;
-	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
-.about-image.placeholder {
-	background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
-	min-height: 400px;
-}
-
-.about-content .lead {
-	margin-bottom: 16px;
-}
-
-.about-content > p {
-	color: var(--text-light);
+.eco-content .lead {
 	margin-bottom: 32px;
 }
 
-.features {
+.eco-reasons {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 24px;
 }
 
-.feature {
+.eco-reason {
 	display: flex;
-	gap: 16px;
-	padding: 16px;
+	gap: 20px;
+	padding: 20px;
 	background: var(--off-white);
-	border-radius: 10px;
+	border-radius: 12px;
+	border-left: 4px solid var(--eco-green);
 	transition: all var(--transition);
 }
 
-.feature:hover {
-	background: var(--gray-100);
+.eco-reason:hover {
 	transform: translateX(8px);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.feature-icon {
+.reason-icon {
 	width: 48px;
 	height: 48px;
 	background: var(--white);
@@ -550,22 +503,121 @@ h1 em, h2 em {
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.feature-icon svg {
+.reason-icon svg {
 	width: 24px;
 	height: 24px;
-	stroke: var(--accent);
+	stroke: var(--eco-green);
 }
 
-.feature strong {
-	display: block;
-	font-size: 1rem;
+.eco-reason h4 {
+	font-size: 1.1rem;
 	color: var(--primary-dark);
-	margin-bottom: 2px;
+	margin-bottom: 6px;
 }
 
-.feature span {
-	font-size: 0.875rem;
-	color: var(--text-muted);
+.eco-reason p {
+	font-size: 0.95rem;
+	color: var(--text-light);
+	line-height: 1.6;
+}
+
+/* Eco Visual */
+.eco-visual {
+	text-align: center;
+}
+
+.eco-circle {
+	margin-bottom: 32px;
+}
+
+.eco-diagram {
+	width: 220px;
+	height: 220px;
+	margin: 0 auto;
+}
+
+.eco-progress {
+	transform: rotate(-90deg);
+	transform-origin: center;
+	stroke-linecap: round;
+}
+
+.eco-percent {
+	font-family: var(--font-heading);
+	font-size: 42px;
+	font-weight: 700;
+	fill: var(--eco-green);
+}
+
+.eco-label {
+	font-size: 16px;
+	fill: var(--text-muted);
+}
+
+.eco-facts {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.eco-fact {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 16px;
+	background: var(--off-white);
+	border-radius: 8px;
+	font-size: 0.95rem;
+	color: var(--text);
+}
+
+.fact-icon {
+	font-size: 1.25rem;
+}
+
+/* ===========================================
+   Banner Section
+   =========================================== */
+
+.section-banner {
+	background: linear-gradient(135deg, var(--eco-green) 0%, #1b5e20 100%);
+	padding: 40px 0;
+}
+
+.banner-content {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.banner-icon {
+	width: 80px;
+	height: 80px;
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.banner-icon svg {
+	width: 40px;
+	height: 40px;
+	stroke: var(--white);
+}
+
+.banner-text h3 {
+	color: var(--white);
+	margin-bottom: 8px;
+}
+
+.banner-text p {
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1rem;
+	line-height: 1.6;
 }
 
 /* ===========================================
@@ -621,11 +673,11 @@ h1 em, h2 em {
 }
 
 .service-list li {
-	padding: 10px 0;
-	padding-left: 24px;
+	padding: 8px 0;
+	padding-left: 20px;
 	position: relative;
 	color: var(--text);
-	font-size: 1.05rem;
+	font-size: 0.95rem;
 }
 
 .service-list li::before {
@@ -636,21 +688,28 @@ h1 em, h2 em {
 	transform: translateY(-50%);
 	width: 6px;
 	height: 6px;
-	background: var(--accent);
+	background: var(--eco-green);
 	border-radius: 50%;
 }
 
-.service-link {
+.service-eco-tag {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	background: rgba(46, 125, 50, 0.1);
+	border-radius: 6px;
+	font-size: 0.85rem;
 	font-weight: 600;
-	color: var(--accent);
+	color: var(--eco-green);
 }
 
-.service-link:hover {
-	color: var(--accent-hover);
+.service-eco-tag svg {
+	stroke: var(--eco-green);
 }
 
 /* ===========================================
-   Products Section
+   Products Section with Carousels
    =========================================== */
 
 .section-products {
@@ -676,42 +735,101 @@ h1 em, h2 em {
 	box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
-.product-image {
+/* Product Carousel */
+.product-carousel {
+	position: relative;
 	aspect-ratio: 1;
 	overflow: hidden;
 	background: var(--gray-100);
 }
 
-.product-image img {
+.carousel-track {
+	display: flex;
+	height: 100%;
+	transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+	min-width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.carousel-slide.active {
+	opacity: 1;
+	position: relative;
+}
+
+.carousel-slide img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	transition: transform var(--transition);
 }
 
-.product-card:hover .product-image img {
-	transform: scale(1.05);
-}
-
-.product-image.placeholder {
+.carousel-slide.placeholder {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
 }
 
+/* Carousel Dots */
+.carousel-dots {
+	position: absolute;
+	bottom: 12px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 6px;
+	z-index: 10;
+}
+
+.carousel-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	border: none;
+	cursor: pointer;
+	transition: all var(--transition);
+}
+
+.carousel-dot.active {
+	background: var(--white);
+	transform: scale(1.2);
+}
+
+/* Product Info */
 .product-info {
 	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
 }
 
 .product-info h4 {
 	color: var(--primary-dark);
-	margin-bottom: 4px;
+	margin-bottom: 0;
+	width: 100%;
 }
 
-.product-info span {
+.product-info > span {
 	font-size: 0.875rem;
 	color: var(--text-muted);
+}
+
+.eco-chip {
+	font-size: 0.75rem;
+	background: rgba(46, 125, 50, 0.1);
+	color: var(--eco-green);
+	padding: 4px 10px;
+	border-radius: 20px;
+	margin-left: auto;
 }
 
 /* ===========================================
@@ -755,10 +873,10 @@ h1 em, h2 em {
 
 .testimonial blockquote {
 	font-family: var(--font-heading);
-	font-size: 1.65rem;
+	font-size: 1.5rem;
 	font-weight: 500;
-	line-height: 1.7;
-	margin-bottom: 36px;
+	line-height: 1.6;
+	margin-bottom: 32px;
 	font-style: italic;
 	color: rgba(255, 255, 255, 0.95);
 }
@@ -773,7 +891,7 @@ h1 em, h2 em {
 .author-avatar {
 	width: 56px;
 	height: 56px;
-	background: var(--accent);
+	background: var(--eco-green);
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -818,8 +936,8 @@ h1 em, h2 em {
 }
 
 .nav-btn:hover {
-	background: var(--accent);
-	border-color: var(--accent);
+	background: var(--eco-green);
+	border-color: var(--eco-green);
 }
 
 .nav-btn svg {
@@ -843,7 +961,7 @@ h1 em, h2 em {
 
 .dot.active,
 .dot:hover {
-	background: var(--accent);
+	background: var(--eco-green);
 }
 
 /* ===========================================
@@ -917,19 +1035,19 @@ h1 em, h2 em {
 .contact-icon svg {
 	width: 22px;
 	height: 22px;
-	stroke: var(--accent);
+	stroke: var(--eco-green);
 }
 
 .contact-item strong {
 	display: block;
-	font-size: 1.1rem;
+	font-size: 0.95rem;
 	color: var(--primary-dark);
-	margin-bottom: 4px;
+	margin-bottom: 2px;
 }
 
 .contact-item span,
 .contact-item a {
-	font-size: 1.05rem;
+	font-size: 0.9rem;
 	color: var(--text-light);
 }
 
@@ -943,26 +1061,6 @@ h1 em, h2 em {
 	padding: 40px;
 	border-radius: 12px;
 	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.form-header {
-	text-align: center;
-	margin-bottom: 28px;
-	padding-bottom: 20px;
-	border-bottom: 2px dashed var(--gray-200);
-}
-
-.form-header h3 {
-	font-family: var(--font-heading);
-	font-size: 1.5rem;
-	color: var(--primary-dark);
-	margin-bottom: 8px;
-}
-
-.form-header p {
-	color: var(--text-light);
-	font-size: 1rem;
-	margin: 0;
 }
 
 .form-row {
@@ -987,13 +1085,13 @@ h1 em, h2 em {
 .form-group select,
 .form-group textarea {
 	width: 100%;
-	padding: 16px 18px;
+	padding: 14px 16px;
 	background: var(--off-white);
 	border: 1px solid var(--gray-200);
 	border-radius: 8px;
 	color: var(--text);
 	font-family: var(--font-body);
-	font-size: 1.1rem;
+	font-size: 1rem;
 	transition: all var(--transition);
 }
 
@@ -1001,8 +1099,8 @@ h1 em, h2 em {
 .form-group select:focus,
 .form-group textarea:focus {
 	outline: none;
-	border-color: var(--accent);
-	box-shadow: 0 0 0 3px rgba(196, 90, 59, 0.1);
+	border-color: var(--eco-green);
+	box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
 .form-group select {
@@ -1061,28 +1159,33 @@ h1 em, h2 em {
 	margin-bottom: 20px;
 }
 
-.footer-brand .logo-icon {
-	background: linear-gradient(135deg, var(--accent) 0%, #e07352 100%);
+.footer-brand .logo-eco {
+	color: var(--eco-green-light);
 }
 
-.footer-brand .logo-eco,
 .footer-brand .logo-telier {
 	color: var(--white);
-}
-
-.footer-brand .logo-telier {
-	color: var(--accent);
-}
-
-.footer-brand .logo-tagline {
-	color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-brand p {
 	font-size: 0.95rem;
 	color: rgba(255, 255, 255, 0.7);
 	line-height: 1.7;
-	margin-bottom: 24px;
+	margin-bottom: 16px;
+}
+
+.footer-eco {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 20px;
+}
+
+.footer-eco span {
+	font-size: 0.8rem;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 6px 12px;
+	border-radius: 20px;
 }
 
 .social-links {
@@ -1102,7 +1205,7 @@ h1 em, h2 em {
 }
 
 .social-links a:hover {
-	background: var(--accent);
+	background: var(--eco-green);
 	transform: translateY(-3px);
 }
 
@@ -1132,7 +1235,7 @@ h1 em, h2 em {
 }
 
 .footer-links a:hover {
-	color: var(--accent);
+	color: var(--eco-green-light);
 }
 
 .footer-newsletter p {
@@ -1162,12 +1265,12 @@ h1 em, h2 em {
 
 .newsletter-form input:focus {
 	outline: none;
-	border-color: var(--accent);
+	border-color: var(--eco-green);
 }
 
 .newsletter-form button {
 	padding: 12px 20px;
-	background: var(--accent);
+	background: var(--eco-green);
 	border: none;
 	border-radius: 8px;
 	color: var(--white);
@@ -1177,7 +1280,7 @@ h1 em, h2 em {
 }
 
 .newsletter-form button:hover {
-	background: var(--accent-hover);
+	background: var(--eco-green-light);
 }
 
 .footer-bottom {
@@ -1205,8 +1308,13 @@ h1 em, h2 em {
 		width: 40%;
 	}
 	
-	.about-grid {
-		gap: 48px;
+	.eco-grid {
+		grid-template-columns: 1fr;
+		gap: 60px;
+	}
+	
+	.eco-visual {
+		order: -1;
 	}
 	
 	.services-grid {
@@ -1301,7 +1409,7 @@ h1 em, h2 em {
 		text-align: center;
 	}
 	
-	.hero p {
+	.hero-lead {
 		max-width: 100%;
 	}
 	
@@ -1309,13 +1417,17 @@ h1 em, h2 em {
 		justify-content: center;
 	}
 	
-	.about-grid,
-	.contact-grid {
-		grid-template-columns: 1fr;
+	.hero-stats {
+		justify-content: center;
 	}
 	
-	.about-image {
-		order: -1;
+	.banner-content {
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.contact-grid {
+		grid-template-columns: 1fr;
 	}
 	
 	.products-grid {
@@ -1344,12 +1456,13 @@ h1 em, h2 em {
 }
 
 @media (max-width: 480px) {
-	html {
-		font-size: 17px;
-	}
-	
 	.products-grid {
 		grid-template-columns: 1fr;
+	}
+	
+	.hero-stats {
+		flex-direction: column;
+		gap: 20px;
 	}
 	
 	.contact-form-wrapper {
@@ -1357,342 +1470,10 @@ h1 em, h2 em {
 	}
 	
 	.testimonial blockquote {
-		font-size: 1.35rem;
+		font-size: 1.25rem;
 	}
 	
-	.btn {
-		padding: 16px 28px;
-		font-size: 1.05rem;
-		width: 100%;
-	}
-	
-	.hero-buttons {
-		flex-direction: column;
-		gap: 12px;
-	}
-	
-	.whatsapp-float {
-		width: 65px;
-		height: 65px;
-	}
-	
-	.whatsapp-float svg {
-		width: 36px;
-		height: 36px;
-	}
-}
-
-/* ===========================================
-   WhatsApp Floating Button
-   =========================================== */
-
-.whatsapp-float {
-	position: fixed;
-	bottom: 24px;
-	right: 24px;
-	width: 60px;
-	height: 60px;
-	background: #25D366;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-	z-index: 1000;
-	transition: all 0.3s ease;
-	animation: pulse 2s infinite;
-}
-
-.whatsapp-float:hover {
-	transform: scale(1.1);
-	box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
-}
-
-.whatsapp-float svg {
-	width: 32px;
-	height: 32px;
-	fill: white;
-}
-
-/* WhatsApp Tooltip */
-.whatsapp-tooltip {
-	position: absolute;
-	right: 75px;
-	background: #1e3a5f;
-	color: white;
-	padding: 10px 16px;
-	border-radius: 8px;
-	font-size: 0.95rem;
-	font-weight: 600;
-	white-space: nowrap;
-	opacity: 0;
-	visibility: hidden;
-	transform: translateX(10px);
-	transition: all 0.3s ease;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.whatsapp-tooltip::after {
-	content: '';
-	position: absolute;
-	right: -8px;
-	top: 50%;
-	transform: translateY(-50%);
-	border: 8px solid transparent;
-	border-left-color: #1e3a5f;
-	border-right: none;
-}
-
-.whatsapp-float:hover .whatsapp-tooltip {
-	opacity: 1;
-	visibility: visible;
-	transform: translateX(0);
-}
-
-@keyframes pulse {
-	0% {
-		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-	}
-	50% {
-		box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7);
-	}
-	100% {
-		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-	}
-}
-
-/* Contact CTA Banner */
-.contact-banner {
-	background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-	padding: 20px;
-	text-align: center;
-	position: relative;
-}
-
-.contact-banner-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 16px;
-	flex-wrap: wrap;
-}
-
-.contact-banner p {
-	color: white;
-	font-size: 1.15rem;
-	font-weight: 500;
-	margin: 0;
-}
-
-.contact-banner .btn-whatsapp {
-	background: #25D366;
-	color: white;
-	display: inline-flex;
-	align-items: center;
-	gap: 10px;
-	padding: 14px 28px;
-	font-size: 1.1rem;
-	font-weight: 600;
-	border-radius: 50px;
-	text-decoration: none;
-	transition: all 0.3s ease;
-}
-
-.contact-banner .btn-whatsapp:hover {
-	background: #1fb855;
-	transform: translateY(-2px);
-}
-
-.contact-banner .btn-whatsapp svg {
-	width: 24px;
-	height: 24px;
-	fill: white;
-}
-
-/* Improved Logo Text */
-.logo {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.logo-icon {
-	width: 42px;
-	height: 42px;
-	background: linear-gradient(135deg, var(--accent) 0%, #e07352 100%);
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow: 0 4px 12px rgba(196, 90, 59, 0.3);
-}
-
-.logo-icon svg {
-	width: 28px;
-	height: 28px;
-	color: white;
-}
-
-.logo-text {
-	display: flex;
-	flex-direction: column;
-	line-height: 1.1;
-}
-
-.logo-eco {
-	font-family: var(--font-heading);
-	font-size: 1.6rem;
-	font-weight: 700;
-	color: var(--primary);
-	letter-spacing: -0.5px;
-}
-
-.logo-telier {
-	font-family: var(--font-heading);
-	font-size: 1.6rem;
-	font-weight: 700;
-	color: var(--accent);
-	letter-spacing: -0.5px;
-	margin-left: 2px;
-}
-
-.logo-tagline {
-	font-family: var(--font-body);
-	font-size: 0.7rem;
-	font-weight: 500;
-	color: var(--text-muted);
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-top: 2px;
-}
-
-.logo-text > span:first-child,
-.logo-text > span:nth-child(2) {
-	display: inline;
-}
-
-@media (max-width: 768px) {
-	.logo-icon {
-		width: 36px;
-		height: 36px;
-	}
-	
-	.logo-icon svg {
-		width: 22px;
-		height: 22px;
-	}
-	
-	.logo-eco, .logo-telier {
-		font-size: 1.3rem;
-	}
-	
-	.logo-tagline {
-		font-size: 0.6rem;
-	}
-	
-	.contact-banner-content {
-		flex-direction: column;
-		gap: 12px;
-	}
-	
-	.contact-banner p {
-		font-size: 1.05rem;
-	}
-	
-	.whatsapp-float {
-		bottom: 20px;
-		right: 20px;
-	}
-}
-
-/* ===========================================
-   WhatsApp Top Banner (appears at top of page)
-   =========================================== */
-
-.whatsapp-banner {
-	background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
-	padding: 12px 0;
-	position: relative;
-	overflow: hidden;
-}
-
-.whatsapp-banner::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-	opacity: 0.5;
-}
-
-.whatsapp-banner-content {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-	flex-wrap: wrap;
-	position: relative;
-	z-index: 1;
-}
-
-.whatsapp-banner-text {
-	color: white;
-	font-size: 1.1rem;
-	font-weight: 600;
-}
-
-.wave-emoji {
-	display: inline-block;
-	animation: wave 1.5s ease-in-out infinite;
-}
-
-@keyframes wave {
-	0%, 100% { transform: rotate(0deg); }
-	25% { transform: rotate(20deg); }
-	75% { transform: rotate(-15deg); }
-}
-
-.whatsapp-banner-btn {
-	display: inline-flex;
-	align-items: center;
-	gap: 8px;
-	background: white;
-	color: #128C7E;
-	padding: 10px 24px;
-	border-radius: 50px;
-	font-weight: 700;
-	font-size: 1rem;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.whatsapp-banner-btn:hover {
-	transform: translateY(-2px) scale(1.02);
-	box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-}
-
-.whatsapp-banner-btn svg {
-	width: 22px;
-	height: 22px;
-	fill: #25D366;
-}
-
-@media (max-width: 768px) {
-	.whatsapp-banner-content {
-		flex-direction: column;
-		gap: 10px;
-	}
-	
-	.whatsapp-banner-text {
-		font-size: 0.95rem;
-		text-align: center;
-	}
-	
-	.whatsapp-banner-btn {
-		padding: 12px 28px;
-		font-size: 1rem;
+	.eco-facts {
+		text-align: left;
 	}
 }
