@@ -85,6 +85,7 @@
 					<ul class="nav-menu" id="nav-menu">
 						<li><a href="#accueil">Accueil</a></li>
 						<li><a href="#apropos">À propos</a></li>
+						<li><a href="#engagement">Engagement Éco</a></li>
 						<li><a href="#services">Services</a></li>
 						<li><a href="#produits">Produits</a></li>
 						<li><a href="#temoignages">Témoignages</a></li>
@@ -100,17 +101,37 @@
 		<section class="hero" id="accueil">
 			<div class="container">
 				<div class="hero-content">
-					<span class="hero-tag">Fabrication sur mesure</span>
-					<h1>L'excellence métallique<br>au service de <em>vos projets</em></h1>
-					<p>Conception et réalisation de structures métalliques pour l'industrie et les particuliers. Qualité artisanale, design innovant, durabilité garantie.</p>
+					<div class="eco-badge">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+							<path d="M12 6v6l4 2"/>
+						</svg>
+						♻️ Acier 100% Recyclable
+					</div>
+					<h1>L'excellence métallique<br>au service de <em>notre planète</em></h1>
+					<p class="hero-lead">Conception et réalisation de structures en <strong>acier recyclable</strong> pour l'industrie et les particuliers. <strong>Moins de bois, plus de durabilité</strong> — notre engagement pour préserver les forêts et l'équilibre écologique.</p>
 					<div class="hero-buttons">
-						<a href="#services" class="btn btn-primary">Découvrir nos services</a>
+						<a href="#engagement" class="btn btn-primary">Notre engagement écologique</a>
 						<a href="#contact" class="btn btn-secondary">Demander un devis</a>
+					</div>
+					<div class="hero-stats">
+						<div class="stat">
+							<span class="stat-number">100%</span>
+							<span class="stat-label">Acier recyclable</span>
+						</div>
+						<div class="stat">
+							<span class="stat-number">∞</span>
+							<span class="stat-label">Cycles de recyclage</span>
+						</div>
+						<div class="stat">
+							<span class="stat-number">🌳</span>
+							<span class="stat-label">Forêts préservées</span>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="hero-image">
-				<img src="images/metal-fabrication-1024x702-975091580.jpg" alt="Fabrication métallique" onerror="this.parentElement.classList.add('no-image');">
+				<img src="images/metal-fabrication-1024x702-975091580.jpg" alt="Fabrication métallique écologique" onerror="this.parentElement.classList.add('no-image');">
 			</div>
 		</section>
 
@@ -123,11 +144,35 @@
 					</div>
 					<div class="about-content">
 						<span class="section-tag">À propos</span>
-						<h2>Notre savoir-faire à votre service</h2>
-						<p class="lead">EcoTelier est votre partenaire de confiance pour tous vos projets de fabrication métallique. Notre équipe d'experts combine savoir-faire artisanal et technologies modernes.</p>
-						<p>Nous concevons et réalisons des produits sur mesure : établis de rangement, tables industrielles, échelles à crinoline, mezzanines et bien d'autres structures selon vos besoins spécifiques.</p>
+						<h2>L'acier au service de <em>l'écologie</em></h2>
+						<p class="lead">EcoTelier a fait un choix responsable : <strong>utiliser principalement l'acier</strong> plutôt que le bois. Pourquoi ? Parce que l'acier est <strong>100% recyclable à l'infini</strong> sans perte de qualité.</p>
+						<p>En limitant l'utilisation du bois dans nos créations, nous contribuons activement à la <strong>préservation des forêts</strong>, véritables poumons de notre planète. Chaque meuble, chaque structure que nous fabriquons représente un arbre qui continue à vivre et à absorber du CO₂.</p>
 						
 						<div class="features">
+							<div class="feature">
+								<div class="feature-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+										<path d="M12 6v6l4 2"/>
+									</svg>
+								</div>
+								<div>
+									<strong>♻️ 100% Recyclable</strong>
+									<span>L'acier se recycle indéfiniment</span>
+								</div>
+							</div>
+							<div class="feature">
+								<div class="feature-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M21 10c0-4.5-4.5-8-9-8s-9 3.5-9 8c0 2.5 2 5 4 7l5 5 5-5c2-2 4-4.5 4-7z"/>
+										<path d="M12 10V6M12 10l3-2M12 10l-3-2"/>
+									</svg>
+								</div>
+								<div>
+									<strong>🌳 Forêts préservées</strong>
+									<span>Moins de bois = Plus d'arbres</span>
+								</div>
+							</div>
 							<div class="feature">
 								<div class="feature-icon">
 									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -135,37 +180,108 @@
 									</svg>
 								</div>
 								<div>
-									<strong>Conception 3D</strong>
-									<span>Modélisation avant réalisation</span>
-								</div>
-							</div>
-							<div class="feature">
-								<div class="feature-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-										<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-										<polyline points="22 4 12 14.01 9 11.01"/>
-									</svg>
-								</div>
-								<div>
-									<strong>Qualité garantie</strong>
-									<span>Matériaux durables</span>
-								</div>
-							</div>
-							<div class="feature">
-								<div class="feature-icon">
-									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-										<rect x="1" y="3" width="15" height="13"/>
-										<polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-										<circle cx="5.5" cy="18.5" r="2.5"/>
-										<circle cx="18.5" cy="18.5" r="2.5"/>
-									</svg>
-								</div>
-								<div>
-									<strong>Installation</strong>
-									<span>Livraison et pose</span>
+									<strong>⚡ Durabilité extrême</strong>
+									<span>Des produits qui durent des décennies</span>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Eco Commitment Section -->
+		<section class="section section-eco" id="engagement">
+			<div class="container">
+				<div class="eco-grid">
+					<div class="eco-content">
+						<span class="section-tag">Notre engagement écologique</span>
+						<h2>L'acier au cœur de notre <em>démarche durable</em></h2>
+						<p class="lead">Chez EcoTelier, nous avons fait un choix stratégique et responsable : <strong>privilégier l'acier au bois</strong> pour préserver notre écosystème et offrir des produits durables à nos clients.</p>
+						
+						<div class="eco-reasons">
+							<div class="eco-reason">
+								<div class="reason-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+										<path d="M12 6v6l4 2"/>
+									</svg>
+								</div>
+								<div>
+									<h4>Acier 100% Recyclable</h4>
+									<p>L'acier est le matériau le plus recyclé au monde. Il peut être recyclé à l'infini sans perdre ses propriétés, contrairement à beaucoup d'autres matériaux.</p>
+								</div>
+							</div>
+							
+							<div class="eco-reason">
+								<div class="reason-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M21 10c0-4.5-4.5-8-9-8s-9 3.5-9 8c0 2.5 2 5 4 7l5 5 5-5c2-2 4-4.5 4-7z"/>
+										<path d="M12 10V6M12 10l3-2M12 10l-3-2"/>
+									</svg>
+								</div>
+								<div>
+									<h4>Préservation des forêts</h4>
+									<p>En limitant notre utilisation du bois, nous contribuons à la préservation des forêts, poumons verts de notre planète et habitats essentiels à la biodiversité.</p>
+								</div>
+							</div>
+							
+							<div class="eco-reason">
+								<div class="reason-icon">
+									<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+										<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+									</svg>
+								</div>
+								<div>
+									<h4>Durabilité exceptionnelle</h4>
+									<p>Nos créations en acier durent des décennies sans se détériorer, réduisant ainsi le besoin de remplacement et la consommation de ressources.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="eco-visual">
+						<div class="eco-circle">
+							<svg class="eco-diagram" viewBox="0 0 200 200">
+								<circle cx="100" cy="100" r="90" fill="none" stroke="#e9ecef" stroke-width="12"/>
+								<circle cx="100" cy="100" r="90" fill="none" stroke="#2e7d32" stroke-width="12" 
+									stroke-dasharray="565.5" stroke-dashoffset="0" class="eco-progress"/>
+								<text x="100" y="95" text-anchor="middle" class="eco-percent">100%</text>
+								<text x="100" y="120" text-anchor="middle" class="eco-label">Recyclable</text>
+							</svg>
+						</div>
+						<div class="eco-facts">
+							<div class="eco-fact">
+								<span class="fact-icon">♻️</span>
+								<span>L'acier peut être recyclé indéfiniment</span>
+							</div>
+							<div class="eco-fact">
+								<span class="fact-icon">🌳</span>
+								<span>Moins de bois = Plus de forêts préservées</span>
+							</div>
+							<div class="eco-fact">
+								<span class="fact-icon">⚡</span>
+								<span>Réduction de l'empreinte carbone</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Eco Banner -->
+		<section class="section-banner">
+			<div class="container">
+				<div class="banner-content">
+					<div class="banner-icon">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+							<path d="M21 10c0-4.5-4.5-8-9-8s-9 3.5-9 8c0 2.5 2 5 4 7l5 5 5-5c2-2 4-4.5 4-7z"/>
+							<path d="M12 10V6M12 10l3-2M12 10l-3-2"/>
+						</svg>
+					</div>
+					<div class="banner-text">
+						<h3>🌍 Notre promesse : Un avenir plus vert</h3>
+						<p>Chaque produit EcoTelier est conçu avec <strong>un minimum de bois</strong> et un maximum d'acier recyclable. Ensemble, préservons notre planète pour les générations futures.</p>
 					</div>
 				</div>
 			</div>
@@ -199,7 +315,13 @@
 							<li>Mezzanines</li>
 							<li>Échelles à crinoline</li>
 						</ul>
-						<a href="#contact" class="service-link">En savoir plus →</a>
+						<div class="service-eco-tag">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+								<path d="M12 6v6l4 2"/>
+							</svg>
+							100% Acier recyclable
+						</div>
 					</div>
 					
 					<div class="service-card">
@@ -212,14 +334,20 @@
 							</svg>
 						</div>
 						<h3>Décoration Intérieure</h3>
-						<p>Guéridons, tables design, étagères et lustres au style industriel pour professionnels de l'événementiel et appartements meublés.</p>
+						<p>Guéridons, tables design, étagères et lustres en acier au style industriel. Conçus pour durer et 100% recyclables.</p>
 						<ul class="service-list">
 							<li>Guéridons design</li>
 							<li>Tables acier et bois</li>
 							<li>Étagères murales</li>
 							<li>Lustres industriels</li>
 						</ul>
-						<a href="#contact" class="service-link">En savoir plus →</a>
+						<div class="service-eco-tag">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+								<path d="M12 6v6l4 2"/>
+							</svg>
+							Minimum de bois, maximum de style
+						</div>
 					</div>
 					
 					<div class="service-card">
@@ -234,14 +362,20 @@
 							</svg>
 						</div>
 						<h3>Aménagement Extérieur</h3>
-						<p>Auvents, pergolas, garde-corps et mobilier de jardin pour embellir vos espaces extérieurs avec élégance et durabilité.</p>
+						<p>Auvents, pergolas et garde-corps en acier inoxydable. Résistants aux intempéries et entièrement recyclables.</p>
 						<ul class="service-list">
 							<li>Pergolas sur mesure</li>
 							<li>Auvents métalliques</li>
 							<li>Garde-corps design</li>
 							<li>Mobilier de jardin</li>
 						</ul>
-						<a href="#contact" class="service-link">En savoir plus →</a>
+						<div class="service-eco-tag">
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+								<path d="M12 6v6l4 2"/>
+							</svg>
+							Durable et éco-responsable
+						</div>
 					</div>
 				</div>
 			</div>
@@ -253,89 +387,192 @@
 				<div class="section-header">
 					<span class="section-tag">Portfolio</span>
 					<h2>Nos réalisations</h2>
-					<p>Découvrez une sélection de nos créations métalliques, alliant robustesse et design contemporain.</p>
+					<p>Découvrez une sélection de nos créations métalliques, alliant robustesse et design contemporain. <strong>100% acier recyclable</strong> pour un avenir durable.</p>
 				</div>
 				
 				<div class="products-grid">
+					<!-- Luminaire Design Industriel -->
 					<div class="product-card">
-						<div class="product-image">
-							<img src="images/table_manger.jpg" alt="Table Industrielle" onerror="this.parentElement.classList.add('placeholder');">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Luminaire design industriel/14954d8cd5441ba61b806f903eb2d916.jpg" alt="Luminaire Design 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Luminaire design industriel/2251dd362724e9e479b0aff1f814950f.jpg" alt="Luminaire Design 2">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Luminaire design industriel/33d8ede6c8fb5a6763bcc20e3e014630.jpg" alt="Luminaire Design 3">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Luminaire design industriel/95d703e03cbd4a92ce41b07d4d97e6b3.jpg" alt="Luminaire Design 4">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Luminaire design industriel/af536cd9773a57746d27f96be8367050.jpg" alt="Luminaire Design 5">
+							</div>
+							<div class="carousel-dots"></div>
 						</div>
 						<div class="product-info">
-							<h4>Table Industrielle</h4>
-							<span>Mobilier</span>
-						</div>
-					</div>
-					
-					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Étagère Métal.jpg" alt="Étagère Métal" onerror="this.parentElement.classList.add('placeholder');">
-						</div>
-						<div class="product-info">
-							<h4>Étagère Métal</h4>
-							<span>Rangement</span>
-						</div>
-					</div>
-					
-					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Pergola.jpg" alt="Pergola" onerror="this.parentElement.classList.add('placeholder');">
-						</div>
-						<div class="product-info">
-							<h4>Pergola</h4>
-							<span>Extérieur</span>
-						</div>
-					</div>
-					
-					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Mezzanine.jpg" alt="Mezzanine" onerror="this.parentElement.classList.add('placeholder');">
-						</div>
-						<div class="product-info">
-							<h4>Mezzanine</h4>
-							<span>Structure</span>
-						</div>
-					</div>
-					
-					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Lustre.jpg" alt="Lustre Industriel" onerror="this.parentElement.classList.add('placeholder');">
-						</div>
-						<div class="product-info">
-							<h4>Lustre Industriel</h4>
+							<h4>Luminaire Design Industriel</h4>
 							<span>Décoration</span>
+							<span class="eco-chip">♻️ 100% Acier</span>
 						</div>
 					</div>
 					
+					<!-- Mezzanine -->
 					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Auvent.jpg" alt="Auvent" onerror="this.parentElement.classList.add('placeholder');">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Mezzanine/0e0ddecb953e4864b1a8c9f63a12189d.jpg" alt="Mezzanine 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mezzanine/884b2fcd4d2e18886eb1e8049c5842b1.jpg" alt="Mezzanine 2">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mezzanine/a2a5762ca8974c3e5ff871daa0dd4c2f.jpg" alt="Mezzanine 3">
+							</div>
+							<div class="carousel-dots"></div>
 						</div>
 						<div class="product-info">
-							<h4>Auvent</h4>
+							<h4>Mezzanine Industrielle</h4>
+							<span>Structure</span>
+							<span class="eco-chip">♻️ 100% Acier</span>
+						</div>
+					</div>
+					
+					<!-- Mobilier Maison -->
+					<div class="product-card">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Mobilier (maison)/299dfcefacd811b5f52bbf72e12a6c6c.jpg" alt="Mobilier Maison 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier (maison)/3b997d7aaa4e547e4c4baf0133af81f1.jpg" alt="Mobilier Maison 2">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier (maison)/7ad651683c7d08d38df4cad79f7c0c40.jpg" alt="Mobilier Maison 3">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier (maison)/9b082bb1dcd84bfa9ce3c9a3d5dc94d8.jpg" alt="Mobilier Maison 4">
+							</div>
+							<div class="carousel-dots"></div>
+						</div>
+						<div class="product-info">
+							<h4>Mobilier Maison</h4>
+							<span>Intérieur</span>
+							<span class="eco-chip">♻️ Éco-design</span>
+						</div>
+					</div>
+					
+					<!-- Mobilier Bureau -->
+					<div class="product-card">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Mobilier(bureau)/Mobilier de bureau(design industrielle).jpg" alt="Mobilier Bureau 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(bureau)/Mobilier de Bureau.jpg" alt="Mobilier Bureau 2">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(bureau)/052723f3c41f2ddf2b7eee95aeb1d0db.jpg" alt="Mobilier Bureau 3">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(bureau)/f05854cb878c607ce81c49f3fda57062.jpg" alt="Mobilier Bureau 4">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(bureau)/b00d5b2a015c4f48e88b4f6eb128d87b (1).jpg" alt="Mobilier Bureau 5">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(bureau)/e01dc44d0741931bb98d2afa53aa1e92 (1).jpg" alt="Mobilier Bureau 6">
+							</div>
+							<div class="carousel-dots"></div>
+						</div>
+						<div class="product-info">
+							<h4>Mobilier de Bureau</h4>
+							<span>Professionnel</span>
+							<span class="eco-chip">♻️ 100% Acier</span>
+						</div>
+					</div>
+					
+					<!-- Mobilier d'intérieur -->
+					<div class="product-card">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Mobilier(d'interieur)/06044085129981a20b8bc1475cb2663d.jpg" alt="Mobilier Intérieur 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(d'interieur)/4638b920e61c1380f9c6fd1770ea8322.jpg" alt="Mobilier Intérieur 2">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(d'interieur)/6c834a162ecdaffbdeb28612a351e763.jpg" alt="Mobilier Intérieur 3">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(d'interieur)/6d76420e0874b4b17f37027d8c8dc18c.jpg" alt="Mobilier Intérieur 4">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(d'interieur)/6e1c6686aea74bd7ff5f688a0f2ecfaf.jpg" alt="Mobilier Intérieur 5">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(d'interieur)/7833408cb3866f59e26399fee61c93ee.jpg" alt="Mobilier Intérieur 6">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Mobilier(d'interieur)/a45e5e1e32cf129c14ddb8e553f83949.jpg" alt="Mobilier Intérieur 7">
+							</div>
+							<div class="carousel-dots"></div>
+						</div>
+						<div class="product-info">
+							<h4>Mobilier d'Intérieur</h4>
+							<span>Design</span>
+							<span class="eco-chip">♻️ Éco-design</span>
+						</div>
+					</div>
+					
+					<!-- Pergolas et auvents -->
+					<div class="product-card">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Pergolas et auvents/14ee279822def6ba0450cf5851662c5a.jpg" alt="Pergola 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Pergolas et auvents/7d875cfd8da5b259da904d183825d996.jpg" alt="Pergola 2">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Pergolas et auvents/91b03c51ac4228a4c2c793107b4867ae.jpg" alt="Pergola 3">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Pergolas et auvents/b42bd36d6f40e8b07b7b87ba8c516c74.jpg" alt="Pergola 4">
+							</div>
+							<div class="carousel-dots"></div>
+						</div>
+						<div class="product-info">
+							<h4>Pergolas & Auvents</h4>
 							<span>Extérieur</span>
+							<span class="eco-chip">♻️ 100% Acier</span>
 						</div>
 					</div>
 					
+					<!-- Rangement Industriel -->
 					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Garder-corps.jpg" alt="Garde-Corps" onerror="this.parentElement.classList.add('placeholder');">
+						<div class="product-carousel">
+							<div class="carousel-slide active">
+								<img src="images/Rangement Industriel/etagereboisacier Project.jpg" alt="Rangement 1">
+							</div>
+							<div class="carousel-slide">
+								<img src="images/Rangement Industriel/Untitled Project.jpg" alt="Rangement 2">
+							</div>
+							<div class="carousel-dots"></div>
 						</div>
 						<div class="product-info">
-							<h4>Garde-Corps</h4>
-							<span>Sécurité</span>
+							<h4>Rangement Industriel</h4>
+							<span>Stockage</span>
+							<span class="eco-chip">♻️ Durable</span>
 						</div>
 					</div>
-					
-					<div class="product-card">
-						<div class="product-image">
-							<img src="images/Etabli.jpg" alt="Établi de Rangement" onerror="this.parentElement.classList.add('placeholder');">
-						</div>
-						<div class="product-info">
-							<h4>Établi de Rangement</h4>
-							<span>Mobilier</span>
-						</div>
-					</div>
+				</div>
+				
+				<!-- Eco message -->
+				<div class="products-eco-message">
+					<div class="eco-message-icon">🌱</div>
+					<p><strong>Pourquoi si peu de bois ?</strong> Nous privilégions l'acier car il est <strong>100% recyclable à l'infini</strong>. En limitant le bois dans nos créations, nous contribuons à préserver les forêts et l'équilibre de notre écosystème. Chaque produit EcoTelier est pensé pour durer et protéger notre planète.</p>
 				</div>
 				
 				<div class="section-cta">
@@ -561,7 +798,7 @@
 							<span class="logo-tagline">Métal & Design</span>
 						</div>
 					</a>
-					<p>Votre partenaire de confiance pour tous vos projets de fabrication métallique. Qualité, durabilité et design innovant.</p>
+					<p>Votre partenaire de confiance pour tous vos projets de fabrication métallique. <strong>Acier 100% recyclable</strong>, préservation des forêts, et design innovant pour un avenir durable.</p>
 					<div class="social-links">
 						<a href="#" aria-label="Facebook">
 							<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
