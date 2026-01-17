@@ -402,6 +402,71 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 	
 	// ===========================================
+	// Image Loading Optimization (Low Connectivity)
+	// ===========================================
+	
+	// Handle all lazy-loaded images
+	document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+		// Mark as loaded when complete
+		if (img.complete && img.naturalHeight !== 0) {
+			img.classList.add('loaded');
+		} else {
+			img.addEventListener('load', function() {
+				this.classList.add('loaded');
+			});
+			
+			// Error handling - show fallback
+			img.addEventListener('error', function() {
+				this.classList.add('error');
+				const parent = this.closest('.product-image');
+				if (parent && !parent.querySelector('.image-error')) {
+					const errorDiv = document.createElement('div');
+					errorDiv.className = 'image-error';
+					errorDiv.innerHTML = `
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+							<rect x="3" y="3" width="18" height="18" rx="2"/>
+							<circle cx="8.5" cy="8.5" r="1.5"/>
+							<path d="M21 15l-5-5L5 21"/>
+						</svg>
+						<span data-fr="Image non disponible" data-en="Image unavailable">Image non disponible</span>
+					`;
+					parent.appendChild(errorDiv);
+					// Hide placeholder
+					const placeholder = parent.querySelector('.image-placeholder');
+					if (placeholder) placeholder.style.display = 'none';
+				}
+			});
+		}
+	});
+	
+	// Preload lightbox images when gallery is clicked (but not all at once)
+	document.querySelectorAll('.product-card').forEach(card => {
+		card.addEventListener('click', function() {
+			const galleryData = this.querySelector('.product-gallery');
+			if (galleryData) {
+				try {
+					const images = JSON.parse(galleryData.dataset.images);
+					// Preload first 3 images only for faster lightbox open
+					images.slice(0, 3).forEach(src => {
+						const preloadImg = new Image();
+						preloadImg.src = src;
+					});
+				} catch(e) {}
+			}
+		});
+	});
+	
+	// Connection-aware image loading
+	if ('connection' in navigator) {
+		const connection = navigator.connection;
+		if (connection.saveData || connection.effectiveType === '2g' || connection.effectiveType === 'slow-2g') {
+			// On slow connections, reduce image quality expectations
+			document.body.classList.add('low-bandwidth');
+			console.log('EcoTelier: Mode connexion lente activé');
+		}
+	}
+	
+	// ===========================================
 	// Language Switcher (FR/EN)
 	// ===========================================
 	
