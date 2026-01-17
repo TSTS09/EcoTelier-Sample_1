@@ -21,14 +21,21 @@
 			</a>
 			
 			<nav class="nav" id="nav">
-				<a href="#accueil">Accueil</a>
-				<a href="#mission">Notre Mission</a>
-				<a href="#services">Services</a>
-				<a href="#realisations">Réalisations</a>
-				<a href="#contact">Contact</a>
+				<a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
+				<a href="#mission" data-fr="Notre Mission" data-en="Our Mission">Notre Mission</a>
+				<a href="#realisations" data-fr="Réalisations" data-en="Portfolio">Réalisations</a>
+				<a href="#services" data-fr="Services" data-en="Services">Services</a>
+				<a href="#contact" data-fr="Contact" data-en="Contact">Contact</a>
 			</nav>
 			
-			<a href="#contact" class="header-cta">Devis Gratuit</a>
+			<div class="header-actions">
+				<button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+					<span class="lang-current">FR</span>
+					<span class="lang-separator">|</span>
+					<span class="lang-other">EN</span>
+				</button>
+				<a href="#contact" class="header-cta" data-fr="Devis Gratuit" data-en="Free Quote">Devis Gratuit</a>
+			</div>
 			
 			<button class="nav-toggle" id="nav-toggle" aria-label="Menu">
 				<span></span>
@@ -46,7 +53,7 @@
 					<span>Fabrication écologique</span>
 				</div>
 				<h1>L'acier qui <em>préserve</em> nos forêts</h1>
-				<p>Nous créons du mobilier en acier 100% recyclable. Moins de bois coupé, plus de forêts préservées. Un choix responsable pour un avenir durable.</p>
+				<p>Mobilier en acier 100% recyclable. Préservons nos forêts ensemble.</p>
 				<div class="hero-actions">
 					<a href="#realisations" class="btn btn-primary">
 						<span>Voir nos créations</span>
@@ -81,120 +88,40 @@
 		</section>
 
 		<!-- Mission Section -->
+		<!-- Mission Section -->
 		<section class="section mission" id="mission">
 			<div class="container">
-				<div class="mission-grid">
-					<div class="mission-intro">
-						<span class="section-label">Notre engagement</span>
-						<h2>Pourquoi nous choisissons l'acier plutôt que le bois</h2>
-						<p class="mission-lead">Chaque arbre compte. C'est pourquoi nous avons fait le choix radical de l'acier — un matériau infiniment recyclable qui ne coûte rien à nos forêts.</p>
-					</div>
-					
-					<div class="mission-reasons">
-						<article class="reason">
-							<div class="reason-number">01</div>
-							<h3>Recyclable à l'infini</h3>
-							<p>L'acier peut être recyclé indéfiniment sans perdre ses propriétés. Chaque création EcoTelier pourra renaître sous une nouvelle forme.</p>
-						</article>
-						
-						<article class="reason">
-							<div class="reason-number">02</div>
-							<h3>Zéro déforestation</h3>
-							<p>En privilégiant l'acier, nous épargnons des milliers d'arbres chaque année. Les forêts continuent de respirer pour nous tous.</p>
-						</article>
-						
-						<article class="reason">
-							<div class="reason-number">03</div>
-							<h3>Durabilité extrême</h3>
-							<p>Nos créations durent des décennies. Pas besoin de remplacer, pas besoin de produire plus. C'est ça, la vraie durabilité.</p>
-						</article>
-						
-						<article class="reason">
-							<div class="reason-number">04</div>
-							<h3>Économie circulaire</h3>
-							<p>75% moins d'énergie pour recycler l'acier que pour en produire du neuf. Un cercle vertueux pour notre planète.</p>
-						</article>
-					</div>
+				<div class="mission-header">
+					<span class="section-label" data-fr="Notre engagement" data-en="Our commitment">Notre engagement</span>
+					<h2 data-fr="Pourquoi l'acier plutôt que le bois" data-en="Why steel instead of wood">Pourquoi l'acier plutôt que le bois</h2>
 				</div>
 				
-				<div class="mission-visual">
-					<div class="eco-meter">
-						<div class="meter-circle">
-							<svg viewBox="0 0 120 120">
-								<circle cx="60" cy="60" r="54" class="meter-bg"/>
-								<circle cx="60" cy="60" r="54" class="meter-fill"/>
-							</svg>
-							<div class="meter-text">
-								<strong>100%</strong>
-								<span>Recyclable</span>
-							</div>
-						</div>
+				<div class="mission-features">
+					<div class="feature-card">
+						<span class="feature-icon">♻️</span>
+						<h3 data-fr="Recyclable à l'infini" data-en="Infinitely Recyclable">Recyclable à l'infini</h3>
 					</div>
-					<div class="eco-tags">
-						<span class="eco-tag">♻️ Acier recyclé</span>
-						<span class="eco-tag">🌳 Forêts préservées</span>
-						<span class="eco-tag">🌍 Impact positif</span>
+					<div class="feature-card">
+						<span class="feature-icon">🌳</span>
+						<h3 data-fr="Zéro déforestation" data-en="Zero Deforestation">Zéro déforestation</h3>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">⚡</span>
+						<h3 data-fr="75% énergie économisée" data-en="75% Energy Saved">75% énergie économisée</h3>
+					</div>
+					<div class="feature-card">
+						<span class="feature-icon">💪</span>
+						<h3 data-fr="Durabilité extrême" data-en="Extreme Durability">Durabilité extrême</h3>
 					</div>
 				</div>
 			</div>
-		</section>
-
-		<!-- Services -->
-		<section class="section services" id="services">
-			<div class="container">
-				<div class="section-header">
-					<span class="section-label">Nos expertises</span>
-					<h2>Ce que nous créons</h2>
-				</div>
-				
-				<div class="services-grid">
-					<article class="service-card">
-						<div class="service-visual">
-							<img src="images/service-industrial.jpg" alt="Mobilier Industriel" onerror="this.style.display='none'">
-						</div>
-						<div class="service-content">
-							<h3>Mobilier Industriel</h3>
-							<p>Établis, mezzanines et structures robustes pour ateliers et entrepôts. Conçus pour durer.</p>
-							<ul class="service-features">
-								<li>Établis professionnels</li>
-								<li>Mezzanines sur mesure</li>
-								<li>Rayonnages industriels</li>
-							</ul>
-							<span class="service-eco">100% Acier recyclable</span>
-						</div>
-					</article>
-					
-					<article class="service-card">
-						<div class="service-visual">
-							<img src="images/service-interior.jpg" alt="Décoration Intérieure" onerror="this.style.display='none'">
-						</div>
-						<div class="service-content">
-							<h3>Décoration Intérieure</h3>
-							<p>Tables, étagères et luminaires au design industriel raffiné. L'élégance de l'acier.</p>
-							<ul class="service-features">
-								<li>Tables design</li>
-								<li>Étagères murales</li>
-								<li>Lustres industriels</li>
-							</ul>
-							<span class="service-eco">100% Acier recyclable</span>
-						</div>
-					</article>
-					
-					<article class="service-card">
-						<div class="service-visual">
-							<img src="images/service-outdoor.jpg" alt="Aménagement Extérieur" onerror="this.style.display='none'">
-						</div>
-						<div class="service-content">
-							<h3>Aménagement Extérieur</h3>
-							<p>Pergolas, auvents et garde-corps qui défient le temps et les intempéries.</p>
-							<ul class="service-features">
-								<li>Pergolas sur mesure</li>
-								<li>Auvents métalliques</li>
-								<li>Garde-corps design</li>
-							</ul>
-							<span class="service-eco">100% Acier recyclable</span>
-						</div>
-					</article>
+			
+			<div class="mission-visual-banner">
+				<div class="banner-content">
+					<div class="banner-text">
+						<strong>100%</strong>
+						<span data-fr="Acier Recyclable" data-en="Recyclable Steel">Acier Recyclable</span>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -205,7 +132,7 @@
 				<div class="section-header section-header-center">
 					<span class="section-label">Portfolio</span>
 					<h2>Nos réalisations</h2>
-					<p>Cliquez sur une image pour explorer la galerie complète</p>
+					<p>Cliquez sur une image pour explorer la galerie</p>
 				</div>
 				
 				<div class="products-grid">
@@ -374,6 +301,66 @@
 			</div>
 		</section>
 
+		<!-- Services -->
+		<section class="section services" id="services">
+			<div class="container">
+				<div class="section-header">
+					<span class="section-label">Nos expertises</span>
+					<h2>Ce que nous créons</h2>
+				</div>
+				
+				<div class="services-grid">
+					<article class="service-card">
+						<div class="service-visual">
+							<img src="images/Rangement Industriel/etagereboisacier Project.jpg" alt="Mobilier Industriel">
+						</div>
+						<div class="service-content">
+							<h3>Mobilier Industriel</h3>
+							<p>Structures robustes conçues pour durer.</p>
+							<ul class="service-features">
+								<li>Établis professionnels</li>
+								<li>Mezzanines sur mesure</li>
+								<li>Rayonnages industriels</li>
+							</ul>
+							<span class="service-eco">100% Acier recyclable</span>
+						</div>
+					</article>
+					
+					<article class="service-card">
+						<div class="service-visual">
+							<img src="images/Mobilier(d'interieur)/6c834a162ecdaffbdeb28612a351e763.jpg" alt="Décoration Intérieure">
+						</div>
+						<div class="service-content">
+							<h3>Décoration Intérieure</h3>
+							<p>Design industriel raffiné et élégant.</p>
+							<ul class="service-features">
+								<li>Tables design</li>
+								<li>Étagères murales</li>
+								<li>Lustres industriels</li>
+							</ul>
+							<span class="service-eco">100% Acier recyclable</span>
+						</div>
+					</article>
+					
+					<article class="service-card">
+						<div class="service-visual">
+							<img src="images/Pergolas et auvents/7d875cfd8da5b259da904d183825d996.jpg" alt="Aménagement Extérieur">
+						</div>
+						<div class="service-content">
+							<h3>Aménagement Extérieur</h3>
+							<p>Créations durables pour l'extérieur.</p>
+							<ul class="service-features">
+								<li>Pergolas sur mesure</li>
+								<li>Auvents métalliques</li>
+								<li>Garde-corps design</li>
+							</ul>
+							<span class="service-eco">100% Acier recyclable</span>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
 		<!-- Testimonials -->
 		<section class="section testimonials">
 			<div class="container">
@@ -428,13 +415,13 @@
 						<p>Envie de mobilier durable et écologique ? Contactez-nous pour un devis personnalisé.</p>
 						
 						<div class="contact-details">
-							<a href="tel:+233000000000" class="contact-item">
-								<span class="contact-icon">
-									<svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+							<a href="https://wa.me/237696685275" class="contact-item" target="_blank">
+								<span class="contact-icon whatsapp-icon">
+									<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/></svg>
 								</span>
-								<span>+233 00 000 0000</span>
+								<span>+237 6 96 68 52 75</span>
 							</a>
-							<a href="mailto:contact@ecotelier.com" class="contact-item">
+							<a href="mailto:tchiosekale6@gmail.com" class="contact-item">
 								<span class="contact-icon">
 									<svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
 								</span>
@@ -444,7 +431,7 @@
 								<span class="contact-icon">
 									<svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
 								</span>
-								<span>Accra, Ghana</span>
+								<span>Douala, Cameroun</span>
 							</div>
 						</div>
 						
@@ -525,10 +512,10 @@
 				</div>
 				
 				<div class="footer-contact">
-					<h4>Contact</h4>
-					<p>Accra, Greater Accra, Ghana</p>
-					<p>+233 00 000 0000</p>
-					<p>contact@ecotelier.com</p>
+					<h4 data-fr="Contact" data-en="Contact">Contact</h4>
+					<p>Douala, Cameroun</p>
+					<a href="https://wa.me/237696685275" class="footer-link">+237 6 96 68 52 75</a>
+					<a href="mailto:tchiosekale6@gmail.com" class="footer-link">contact@ecotelier.com</a>
 				</div>
 			</div>
 			
@@ -569,6 +556,15 @@
 			<div class="lightbox-thumbnails" id="lightbox-thumbnails"></div>
 		</div>
 	</div>
+
+	<!-- Floating WhatsApp Button -->
+	<a href="https://wa.me/237696685275" class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+		<svg viewBox="0 0 24 24">
+			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+			<path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/>
+		</svg>
+		<span class="whatsapp-tooltip">Contactez-nous</span>
+	</a>
 
 	<script src="js/main.js"></script>
 </body>

@@ -47,14 +47,14 @@
 }
 
 html {
-	font-size: 16px;
+	font-size: 18px;
 	scroll-behavior: smooth;
 	-webkit-font-smoothing: antialiased;
 }
 
 body {
 	font-family: var(--font-body);
-	font-size: 1rem;
+	font-size: 1.1rem;
 	font-weight: 400;
 	line-height: 1.6;
 	color: var(--ink);
@@ -91,10 +91,10 @@ h1, h2, h3, h4 {
 	color: var(--ink);
 }
 
-h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
-h2 { font-size: clamp(2rem, 4vw, 2.75rem); }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.125rem; }
+h1 { font-size: clamp(3rem, 7vw, 5rem); }
+h2 { font-size: clamp(2.25rem, 5vw, 3.25rem); }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; }
 
 h1 em, h2 em {
 	font-style: normal;
@@ -425,152 +425,158 @@ h1 em, h2 em {
 }
 
 /* ===========================================
-   Mission Section
+   Mission Section - Clean Redesign
    =========================================== */
 
 .mission {
 	background: var(--white);
+	padding: var(--space-xl) 0;
 }
 
-.mission-grid {
-	display: grid;
-	grid-template-columns: 1fr 1.5fr;
-	gap: var(--space-xl);
+.mission .container {
+	text-align: center;
+}
+
+.mission-header {
 	margin-bottom: var(--space-xl);
 }
 
-.mission-intro h2 {
-	margin-bottom: var(--space-md);
+.mission-header h2 {
+	font-size: clamp(2rem, 5vw, 3rem);
+	max-width: 700px;
+	margin: 0 auto;
 }
 
-.mission-lead {
-	font-size: 1.125rem;
-	color: var(--slate);
-	line-height: 1.8;
-}
-
-.mission-reasons {
+.mission-features {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: var(--space-md);
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--space-lg);
+	margin-bottom: var(--space-xl);
 }
 
-.reason {
+.feature-card {
 	padding: var(--space-lg);
 	background: var(--cream);
-	border-radius: 8px;
+	border-radius: 12px;
 	transition: all var(--duration) var(--ease);
 }
 
-.reason:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+.feature-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.reason-number {
+.feature-icon {
+	font-size: 3rem;
+	display: block;
+	margin-bottom: var(--space-md);
+}
+
+.feature-card h3 {
+	font-size: 1.25rem;
+	color: var(--ink);
+	margin: 0;
+}
+
+/* Mission Visual Banner with Background Image */
+.mission-visual-banner {
+	position: relative;
+	background: url('../images/metal-fabrication-1024x702-975091580.jpg') center/cover no-repeat;
+	border-radius: 16px;
+	overflow: hidden;
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.mission-visual-banner::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(45, 90, 61, 0.85) 0%, rgba(26, 26, 26, 0.9) 100%);
+}
+
+.banner-content {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	padding: var(--space-xl);
+}
+
+.banner-text {
+	color: var(--white);
+}
+
+.banner-text strong {
+	display: block;
 	font-family: var(--font-display);
-	font-size: 2.5rem;
-	color: var(--mist);
+	font-size: clamp(4rem, 12vw, 8rem);
+	line-height: 1;
 	margin-bottom: var(--space-sm);
-	transition: color var(--duration) var(--ease);
 }
 
-.reason:hover .reason-number {
+.banner-text span {
+	font-size: clamp(1.25rem, 3vw, 2rem);
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	opacity: 0.9;
+}
+
+/* ===========================================
+   Language Toggle
+   =========================================== */
+
+.header-actions {
+	display: flex;
+	align-items: center;
+	gap: var(--space-md);
+}
+
+.lang-toggle {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	background: transparent;
+	border: 1px solid var(--sand);
+	border-radius: 4px;
+	font-size: 0.8rem;
+	font-weight: 600;
+	color: var(--slate);
+	cursor: pointer;
+	transition: all var(--duration) var(--ease);
+}
+
+.lang-toggle:hover {
+	border-color: var(--forest);
 	color: var(--forest);
 }
 
-.reason h3 {
-	font-size: 1.125rem;
-	margin-bottom: var(--space-xs);
+.lang-current {
+	color: var(--forest);
+	font-weight: 700;
 }
 
-.reason p {
+.lang-separator {
+	color: var(--sand);
+}
+
+.lang-other {
+	opacity: 0.6;
+}
+
+/* Footer clickable links */
+.footer-link {
+	display: block;
 	font-size: 0.9rem;
-	color: var(--stone);
-	line-height: 1.6;
+	color: var(--sand);
+	line-height: 1.8;
+	transition: color var(--duration) var(--ease);
 }
 
-/* Mission Visual */
-.mission-visual {
-	display: flex;
-	align-items: center;
-	gap: var(--space-xl);
-	padding: var(--space-lg);
-	background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
-	border-radius: 12px;
-}
-
-.eco-meter {
-	flex-shrink: 0;
-}
-
-.meter-circle {
-	position: relative;
-	width: 160px;
-	height: 160px;
-}
-
-.meter-circle svg {
-	width: 100%;
-	height: 100%;
-	transform: rotate(-90deg);
-}
-
-.meter-bg {
-	fill: none;
-	stroke: rgba(255,255,255,0.2);
-	stroke-width: 8;
-}
-
-.meter-fill {
-	fill: none;
-	stroke: var(--white);
-	stroke-width: 8;
-	stroke-linecap: round;
-	stroke-dasharray: 339.3;
-	stroke-dashoffset: 339.3;
-	animation: fillMeter 2s ease forwards;
-}
-
-@keyframes fillMeter {
-	to { stroke-dashoffset: 0; }
-}
-
-.meter-text {
-	position: absolute;
-	inset: 0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.footer-link:hover {
 	color: var(--white);
-}
-
-.meter-text strong {
-	font-family: var(--font-display);
-	font-size: 2.5rem;
-}
-
-.meter-text span {
-	font-size: 0.875rem;
-	opacity: 0.8;
-}
-
-.eco-tags {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
-}
-
-.eco-tag {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5rem;
-	padding: 0.75rem 1rem;
-	background: rgba(255,255,255,0.15);
-	color: var(--white);
-	font-size: 0.9rem;
-	border-radius: 4px;
 }
 
 /* ===========================================
@@ -1361,6 +1367,7 @@ h1 em, h2 em {
 	
 	.hero-actions {
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 	
 	.hero-stats {
@@ -1371,17 +1378,12 @@ h1 em, h2 em {
 		height: 400px;
 	}
 	
-	.mission-grid {
-		grid-template-columns: 1fr;
+	.mission-features {
+		grid-template-columns: repeat(2, 1fr);
 	}
 	
-	.mission-reasons {
-		grid-template-columns: 1fr;
-	}
-	
-	.mission-visual {
-		flex-direction: column;
-		text-align: center;
+	.mission-visual-banner {
+		min-height: 250px;
 	}
 	
 	.services-grid {
@@ -1405,8 +1407,21 @@ h1 em, h2 em {
 }
 
 @media (max-width: 768px) {
+	html {
+		font-size: 16px;
+	}
+	
 	.header-cta {
 		display: none;
+	}
+	
+	.header-actions {
+		gap: var(--space-sm);
+	}
+	
+	.lang-toggle {
+		padding: 0.4rem 0.6rem;
+		font-size: 0.75rem;
 	}
 	
 	.nav {
@@ -1420,6 +1435,7 @@ h1 em, h2 em {
 		padding: 100px var(--space-lg) var(--space-lg);
 		box-shadow: -10px 0 40px rgba(0,0,0,0.1);
 		transition: right var(--duration) var(--ease);
+		z-index: 101;
 	}
 	
 	.nav.active {
@@ -1434,6 +1450,7 @@ h1 em, h2 em {
 	
 	.nav-toggle {
 		display: flex;
+		z-index: 102;
 	}
 	
 	.nav-toggle.active span:first-child {
@@ -1442,6 +1459,37 @@ h1 em, h2 em {
 	
 	.nav-toggle.active span:last-child {
 		transform: rotate(-45deg) translate(4px, -4px);
+	}
+	
+	.mission-features {
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--space-md);
+	}
+	
+	.feature-card {
+		padding: var(--space-md);
+	}
+	
+	.feature-icon {
+		font-size: 2.5rem;
+	}
+	
+	.feature-card h3 {
+		font-size: 1rem;
+	}
+	
+	.mission-visual-banner {
+		min-height: 200px;
+		border-radius: 12px;
+	}
+	
+	.banner-text strong {
+		font-size: 4rem;
+	}
+	
+	.banner-text span {
+		font-size: 1rem;
+		letter-spacing: 0.1em;
 	}
 	
 	.products-grid {
@@ -1479,6 +1527,32 @@ h1 em, h2 em {
 }
 
 @media (max-width: 480px) {
+	.mission-features {
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-sm);
+	}
+	
+	.feature-card {
+		padding: var(--space-sm);
+	}
+	
+	.feature-icon {
+		font-size: 2rem;
+		margin-bottom: var(--space-sm);
+	}
+	
+	.feature-card h3 {
+		font-size: 0.85rem;
+	}
+	
+	.banner-text strong {
+		font-size: 3rem;
+	}
+	
+	.banner-text span {
+		font-size: 0.85rem;
+	}
+	
 	.products-grid {
 		grid-template-columns: 1fr;
 	}
@@ -1499,5 +1573,123 @@ h1 em, h2 em {
 	
 	.lightbox-container {
 		padding: var(--space-sm);
+	}
+	
+	.service-card {
+		margin-bottom: var(--space-md);
+	}
+	
+	.service-content {
+		padding: var(--space-md);
+	}
+	
+	.service-content h3 {
+		font-size: 1.25rem;
+	}
+}
+
+/* ===========================================
+   Floating WhatsApp Button
+   =========================================== */
+
+.whatsapp-float {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 60px;
+	height: 60px;
+	background: #25D366;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+	z-index: 999;
+	transition: all 0.3s var(--ease);
+	animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+	transform: scale(1.1);
+	box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+	width: 32px;
+	height: 32px;
+	fill: white;
+	stroke: none;
+}
+
+.whatsapp-tooltip {
+	position: absolute;
+	right: 75px;
+	background: var(--ink);
+	color: white;
+	padding: 8px 16px;
+	border-radius: 8px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	white-space: nowrap;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(10px);
+	transition: all 0.3s var(--ease);
+}
+
+.whatsapp-tooltip::after {
+	content: '';
+	position: absolute;
+	right: -6px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-width: 6px;
+	border-style: solid;
+	border-color: transparent transparent transparent var(--ink);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+}
+
+@keyframes pulse {
+	0% {
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+	}
+	50% {
+		box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.1);
+	}
+	100% {
+		box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+	}
+}
+
+/* WhatsApp icon in contact section */
+.contact-icon.whatsapp-icon {
+	background: #25D366;
+}
+
+.contact-icon.whatsapp-icon svg {
+	stroke: white;
+	fill: white;
+}
+
+@media (max-width: 768px) {
+	.whatsapp-float {
+		bottom: 20px;
+		right: 20px;
+		width: 55px;
+		height: 55px;
+	}
+	
+	.whatsapp-float svg {
+		width: 28px;
+		height: 28px;
+	}
+	
+	.whatsapp-tooltip {
+		display: none;
 	}
 }

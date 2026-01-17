@@ -394,11 +394,199 @@ document.addEventListener('DOMContentLoaded', function() {
 	}, observerOptions);
 	
 	// Animate elements on scroll
-	document.querySelectorAll('.reason, .service-card, .product-card').forEach(el => {
+	document.querySelectorAll('.feature-card, .service-card, .product-card').forEach(el => {
 		el.style.opacity = '0';
 		el.style.transform = 'translateY(30px)';
 		el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
 		observer.observe(el);
 	});
+	
+	// ===========================================
+	// Language Switcher (FR/EN)
+	// ===========================================
+	
+	const langToggle = document.getElementById('lang-toggle');
+	let currentLang = localStorage.getItem('ecotelier-lang') || 'fr';
+	
+	// Translation data for dynamic elements
+	const translations = {
+		fr: {
+			heroTitle: "L'acier qui <em>préserve</em> nos forêts",
+			heroText: "Mobilier en acier 100% recyclable. Préservons nos forêts ensemble.",
+			seeCreations: "Voir nos créations",
+			whySteel: "Pourquoi l'acier ?",
+			recyclable: "Recyclable",
+			lifeCycles: "Cycles de vie",
+			expertise: "Ans d'expertise",
+			contactTitle: "Parlons de votre projet",
+			contactText: "Envie de mobilier durable et écologique ? Contactez-nous pour un devis personnalisé.",
+			fullName: "Nom complet",
+			email: "Email",
+			subject: "Sujet",
+			select: "Sélectionner...",
+			quoteRequest: "Demande de devis",
+			industrialFurniture: "Mobilier industriel",
+			interiorDecoration: "Décoration intérieure",
+			outdoorDesign: "Aménagement extérieur",
+			other: "Autre",
+			message: "Message",
+			sendMessage: "Envoyer le message",
+			ecoMessage: "Chaque projet réalisé en acier = des arbres préservés",
+			portfolioTitle: "Nos réalisations",
+			portfolioText: "Cliquez sur une image pour explorer la galerie",
+			servicesTitle: "Ce que nous créons",
+			viewGallery: "Voir la galerie",
+			testimonialsTitle: "Ils nous font confiance"
+		},
+		en: {
+			heroTitle: "Steel that <em>preserves</em> our forests",
+			heroText: "100% recyclable steel furniture. Let's preserve our forests together.",
+			seeCreations: "See our creations",
+			whySteel: "Why steel?",
+			recyclable: "Recyclable",
+			lifeCycles: "Life cycles",
+			expertise: "Years of expertise",
+			contactTitle: "Let's talk about your project",
+			contactText: "Want durable and eco-friendly furniture? Contact us for a personalized quote.",
+			fullName: "Full name",
+			email: "Email",
+			subject: "Subject",
+			select: "Select...",
+			quoteRequest: "Quote request",
+			industrialFurniture: "Industrial furniture",
+			interiorDecoration: "Interior decoration",
+			outdoorDesign: "Outdoor design",
+			other: "Other",
+			message: "Message",
+			sendMessage: "Send message",
+			ecoMessage: "Every steel project = trees preserved",
+			portfolioTitle: "Our creations",
+			portfolioText: "Click an image to explore the gallery",
+			servicesTitle: "What we create",
+			viewGallery: "View gallery",
+			testimonialsTitle: "They trust us"
+		}
+	};
+	
+	function setLanguage(lang) {
+		currentLang = lang;
+		localStorage.setItem('ecotelier-lang', lang);
+		document.documentElement.lang = lang;
+		
+		// Update all elements with data-fr and data-en attributes
+		document.querySelectorAll('[data-fr][data-en]').forEach(el => {
+			el.textContent = el.getAttribute(`data-${lang}`);
+		});
+		
+		// Update toggle button appearance
+		const langCurrent = langToggle.querySelector('.lang-current');
+		const langOther = langToggle.querySelector('.lang-other');
+		
+		if (lang === 'fr') {
+			langCurrent.textContent = 'FR';
+			langOther.textContent = 'EN';
+		} else {
+			langCurrent.textContent = 'EN';
+			langOther.textContent = 'FR';
+		}
+		
+		// Update specific dynamic content
+		const t = translations[lang];
+		
+		// Hero section
+		const heroH1 = document.querySelector('.hero h1');
+		if (heroH1) heroH1.innerHTML = t.heroTitle;
+		
+		const heroP = document.querySelector('.hero-content > p');
+		if (heroP) heroP.textContent = t.heroText;
+		
+		const heroBtnPrimary = document.querySelector('.hero-actions .btn-primary span');
+		if (heroBtnPrimary) heroBtnPrimary.textContent = t.seeCreations;
+		
+		const heroBtnGhost = document.querySelector('.hero-actions .btn-ghost');
+		if (heroBtnGhost) heroBtnGhost.textContent = t.whySteel;
+		
+		// Hero stats
+		const statSpans = document.querySelectorAll('.hero-stat span');
+		if (statSpans.length >= 3) {
+			statSpans[0].textContent = t.recyclable;
+			statSpans[1].textContent = t.lifeCycles;
+			statSpans[2].textContent = t.expertise;
+		}
+		
+		// Contact section
+		const contactH2 = document.querySelector('.contact-info h2');
+		if (contactH2) contactH2.textContent = t.contactTitle;
+		
+		const contactP = document.querySelector('.contact-info > p');
+		if (contactP) contactP.textContent = t.contactText;
+		
+		// Form labels
+		const nameLabel = document.querySelector('label[for="name"]');
+		if (nameLabel) nameLabel.textContent = t.fullName;
+		
+		const emailLabel = document.querySelector('label[for="email"]');
+		if (emailLabel) emailLabel.textContent = t.email;
+		
+		const subjectLabel = document.querySelector('label[for="subject"]');
+		if (subjectLabel) subjectLabel.textContent = t.subject;
+		
+		const messageLabel = document.querySelector('label[for="message"]');
+		if (messageLabel) messageLabel.textContent = t.message;
+		
+		// Select options
+		const selectOptions = document.querySelectorAll('#subject option');
+		if (selectOptions.length >= 6) {
+			selectOptions[0].textContent = t.select;
+			selectOptions[1].textContent = t.quoteRequest;
+			selectOptions[2].textContent = t.industrialFurniture;
+			selectOptions[3].textContent = t.interiorDecoration;
+			selectOptions[4].textContent = t.outdoorDesign;
+			selectOptions[5].textContent = t.other;
+		}
+		
+		// Submit button
+		const submitBtn = document.querySelector('.contact-form button[type="submit"] span');
+		if (submitBtn) submitBtn.textContent = t.sendMessage;
+		
+		// Eco badge
+		const ecoBadge = document.querySelector('.contact-eco-badge p');
+		if (ecoBadge) ecoBadge.textContent = t.ecoMessage;
+		
+		// Portfolio section
+		const portfolioH2 = document.querySelector('.realisations h2');
+		if (portfolioH2) portfolioH2.textContent = t.portfolioTitle;
+		
+		const portfolioP = document.querySelector('.realisations .section-header p');
+		if (portfolioP) portfolioP.textContent = t.portfolioText;
+		
+		// Services section
+		const servicesH2 = document.querySelector('.services h2');
+		if (servicesH2) servicesH2.textContent = t.servicesTitle;
+		
+		// View gallery buttons
+		document.querySelectorAll('.product-view').forEach(btn => {
+			const span = btn.querySelector('svg');
+			if (span) {
+				btn.innerHTML = '';
+				btn.appendChild(span);
+				btn.append(' ' + t.viewGallery);
+			}
+		});
+		
+		// Testimonials
+		const testimonialsH2 = document.querySelector('.testimonials h2');
+		if (testimonialsH2) testimonialsH2.textContent = t.testimonialsTitle;
+	}
+	
+	// Initialize language
+	if (langToggle) {
+		setLanguage(currentLang);
+		
+		langToggle.addEventListener('click', function() {
+			const newLang = currentLang === 'fr' ? 'en' : 'fr';
+			setLanguage(newLang);
+		});
+	}
 	
 });
