@@ -3,8 +3,10 @@
 <head>
 	<title>EcoTelier - Fabrication Métallique Écologique</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<meta name="description" content="EcoTelier - Créations métalliques durables. Acier 100% recyclable pour préserver nos forêts.">
+	<meta name="theme-color" content="#2d5a3d">
+	<meta name="format-detection" content="telephone=no">
 
 	<link href="css/styles.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +14,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- Skip to main content link for accessibility -->
+	<a href="#accueil" class="skip-link" data-fr="Aller au contenu principal" data-en="Skip to main content">Aller au contenu principal</a>
+	
 	<!-- Header -->
 	<header class="header">
 		<div class="header-inner">
@@ -32,7 +37,7 @@
 				<span class="logo-name">Eco<strong>Telier</strong></span>
 			</a>
 			
-			<nav class="nav" id="nav">
+			<nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
 				<a href="#accueil" data-fr="Accueil" data-en="Home">Accueil</a>
 				<a href="#mission" data-fr="Notre Mission" data-en="Our Mission">Notre Mission</a>
 				<a href="#realisations" data-fr="Réalisations" data-en="Portfolio">Réalisations</a>
@@ -41,15 +46,15 @@
 			</nav>
 			
 			<div class="header-actions">
-				<button class="lang-toggle" id="lang-toggle" aria-label="Change language">
-					<span class="lang-current">FR</span>
-					<span class="lang-separator">|</span>
-					<span class="lang-other">EN</span>
+				<button class="lang-toggle" id="lang-toggle" aria-label="Changer de langue / Change language" role="button">
+					<span class="lang-current" aria-hidden="true">FR</span>
+					<span class="lang-separator" aria-hidden="true">|</span>
+					<span class="lang-other" aria-hidden="true">EN</span>
 				</button>
 				<a href="#contact" class="header-cta" data-fr="Devis Gratuit" data-en="Free Quote">Devis Gratuit</a>
 			</div>
 			
-			<button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+			<button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
 				<span></span>
 				<span></span>
 			</button>
@@ -412,12 +417,12 @@
 					</div>
 					
 					<div class="testimonials-nav">
-						<button class="testimonial-btn" id="prev-testimonial">
-							<svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+						<button class="testimonial-btn" id="prev-testimonial" aria-label="Témoignage précédent">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
 						</button>
-						<div class="testimonials-dots" id="testimonials-dots"></div>
-						<button class="testimonial-btn" id="next-testimonial">
-							<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+						<div class="testimonials-dots" id="testimonials-dots" role="tablist" aria-label="Sélection de témoignage"></div>
+						<button class="testimonial-btn" id="next-testimonial" aria-label="Témoignage suivant">
+							<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 						</button>
 					</div>
 				</div>
@@ -554,24 +559,24 @@
 	</footer>
 
 	<!-- Gallery Lightbox Modal -->
-	<div class="lightbox" id="lightbox">
+	<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie d'images" aria-hidden="true">
 		<div class="lightbox-backdrop"></div>
 		<div class="lightbox-container">
-			<button class="lightbox-close" id="lightbox-close">
-				<svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+			<button class="lightbox-close" id="lightbox-close" aria-label="Fermer la galerie">
+				<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
 			</button>
 			
 			<div class="lightbox-main">
-				<button class="lightbox-arrow lightbox-prev" id="lightbox-prev">
-					<svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+				<button class="lightbox-arrow lightbox-prev" id="lightbox-prev" aria-label="Image précédente">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
 				</button>
 				
 				<div class="lightbox-image-container">
 					<img class="lightbox-image" id="lightbox-image" src="" alt="">
 				</div>
 				
-				<button class="lightbox-arrow lightbox-next" id="lightbox-next">
-					<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+				<button class="lightbox-arrow lightbox-next" id="lightbox-next" aria-label="Image suivante">
+					<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 				</button>
 			</div>
 			
@@ -585,8 +590,8 @@
 	</div>
 
 	<!-- Floating WhatsApp Button -->
-	<a href="https://wa.me/237696685275" class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
-		<svg viewBox="0 0 24 24">
+	<a href="https://wa.me/237696685275" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactez-nous sur WhatsApp / Contact us on WhatsApp">
+		<svg viewBox="0 0 24 24" aria-hidden="true">
 			<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
 			<path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A10 10 0 0 1 2 12 10 10 0 0 1 12 2z"/>
 		</svg>

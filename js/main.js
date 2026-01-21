@@ -14,9 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
 	
 	if (navToggle && nav) {
 		navToggle.addEventListener('click', function() {
-			this.classList.toggle('active');
+			const isActive = this.classList.toggle('active');
 			nav.classList.toggle('active');
-			document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+			document.body.style.overflow = isActive ? 'hidden' : '';
+			
+			// Update ARIA attributes for accessibility
+			this.setAttribute('aria-expanded', isActive);
+			this.setAttribute('aria-label', isActive ? 'Fermer le menu' : 'Ouvrir le menu');
 		});
 		
 		// Close on link click
@@ -25,6 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 				navToggle.classList.remove('active');
 				nav.classList.remove('active');
 				document.body.style.overflow = '';
+				navToggle.setAttribute('aria-expanded', 'false');
+				navToggle.setAttribute('aria-label', 'Ouvrir le menu');
 			});
 		});
 		
@@ -34,6 +40,20 @@ document.addEventListener('DOMContentLoaded', function() {
 				navToggle.classList.remove('active');
 				nav.classList.remove('active');
 				document.body.style.overflow = '';
+				navToggle.setAttribute('aria-expanded', 'false');
+				navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+			}
+		});
+		
+		// Close on Escape key
+		document.addEventListener('keydown', function(e) {
+			if (e.key === 'Escape' && nav.classList.contains('active')) {
+				navToggle.classList.remove('active');
+				nav.classList.remove('active');
+				document.body.style.overflow = '';
+				navToggle.setAttribute('aria-expanded', 'false');
+				navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+				navToggle.focus();
 			}
 		});
 	}
@@ -74,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	let currentGallery = [];
 	let currentIndex = 0;
 	let currentTitle = '';
+	let previousFocusElement = null;
 	
 	// Open lightbox
 	function openLightbox(images, title, startIndex = 0) {
@@ -81,17 +102,28 @@ document.addEventListener('DOMContentLoaded', function() {
 		currentTitle = title;
 		currentIndex = startIndex;
 		
+		// Store the element that had focus before opening
+		previousFocusElement = document.activeElement;
+		
 		lightbox.classList.add('active');
+		lightbox.setAttribute('aria-hidden', 'false');
 		document.body.style.overflow = 'hidden';
 		
 		updateLightboxImage();
 		createThumbnails();
+		
+		// Focus on close button for accessibility
+		if (lightboxClose) lightboxClose.focus();
 	}
 	
 	// Close lightbox
 	function closeLightbox() {
 		lightbox.classList.remove('active');
+		lightbox.setAttribute('aria-hidden', 'true');
 		document.body.style.overflow = '';
+		
+		// Return focus to the element that opened the lightbox
+		if (previousFocusElement) previousFocusElement.focus();
 	}
 	
 	// Update main image
@@ -100,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		
 		setTimeout(() => {
 			lightboxImage.src = currentGallery[currentIndex];
-			lightboxImage.alt = currentTitle;
+			lightboxImage.alt = currentTitle + ' - Image ' + (currentIndex + 1);
 			lightboxTitle.textContent = currentTitle;
 			lightboxCounter.textContent = `${currentIndex + 1} / ${currentGallery.length}`;
 			lightboxImage.style.opacity = '1';
@@ -120,10 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
 		currentGallery.forEach((src, index) => {
 			const thumb = document.createElement('div');
 			thumb.className = 'lightbox-thumb' + (index === currentIndex ? ' active' : '');
-			thumb.innerHTML = `<img src="${src}" alt="">`;
+			thumb.innerHTML = `<img src="${src}" alt="Image ${index + 1}">`;
+			thumb.setAttribute('role', 'button');
+			thumb.setAttribute('tabindex', '0');
 			thumb.addEventListener('click', () => {
 				currentIndex = index;
 				updateLightboxImage();
+			});
+			thumb.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					currentIndex = index;
+					updateLightboxImage();
+				}
 			});
 			lightboxThumbnails.appendChild(thumb);
 		});
